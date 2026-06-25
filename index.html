@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bong Pizza Medinipur | A Touch of Bengal, A Slice of Italy</title>
+  <meta name="description" content="Experience Medinipur's premier fusion dining. Famous for hand-rolled pizzas, Chicken Kosha Pizza, signature kebabs, and zesty Gondhoraj infusions. Located near Midnapore Railway Station.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- SECTION 1 — Sticky Navigation -->
+  <header class="navbar-container">
+    <nav class="navbar">
+      <div class="nav-links-left">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Why Us</a>
+        <a href="#signature">Signature</a>
+      </div>
+      
+      <div class="logo-wrapper">
+        <a href="#home" class="logo-brand">
+          <span class="logo-accent">Bong</span>Pizza
+          <span class="logo-tagline">A Touch of Bengal</span>
+        </a>
+      </div>
+      
+      <div class="nav-links-right">
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-cta">Book Table</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#home" class="drawer-link">Home</a>
+    <a href="#about" class="drawer-link">About</a>
+    <a href="#features" class="drawer-link">Why Us</a>
+    <a href="#signature" class="drawer-link">Signature</a>
+    <a href="#menu" class="drawer-link">Menu</a>
+    <a href="#gallery" class="drawer-link">Gallery</a>
+    <a href="#reviews" class="drawer-link">Reviews</a>
+    <a href="#contact" class="drawer-link drawer-cta">Book a Table</a>
+  </div>
+
+  <!-- SECTION 2 — Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <span class="badge-pill">Premium Multi-Cuisine Dining</span>
+      <h1 class="hero-title">Experience the Language of Taste</h1>
+      <p class="hero-subtitle">Where traditional Bengal spices embrace classic Italian fire. Home to the legendary Chicken Kosha Pizza and hand-rolled delicacies in the heart of Medinipur.</p>
+      
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn-outline">Find Our Location</a>
+      </div>
+
+      <!-- Trust Badge -->
+      <div class="rating-badge">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span class="rating-text"><strong>4.3 / 5</strong> on Google Reviews (500+ ratings)</span>
+      </div>
+    </div>
+    
+    <div class="hero-image-wrapper">
+      <img src="assets/hero_pizza.png" alt="Signature Bong Pizza" class="hero-img">
+      <!-- Circular Floating CTA badge -->
+      <a href="#contact" class="floating-circle-cta">
+        <svg viewBox="0 0 100 100">
+          <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+          <text><textPath href="#circlePath">BOOK A TABLE • RESERVE NOW • </textPath></text>
+        </svg>
+        <div class="circle-arrow">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Why Customers Love Us -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <span class="section-subtitle">Why Diner's Choose Us</span>
+      <h2 class="section-title">Blending Tradition & Innovation</h2>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="card-icon"><i class="fas fa-pizza-slice"></i></div>
+        <h3>Artisanal Hand-Rolled Dough</h3>
+        <p>Our pizzas are built on scratch-made dough, proofed slowly, and hand-stretched for a crispy, airy crust that defines true craftsmanship.</p>
+      </div>
+      
+      <div class="feature-card highlighted">
+        <div class="card-icon"><i class="fas fa-pepper-hot"></i></div>
+        <h3>Bengal-Italian Fusion</h3>
+        <p>Savor rich local flavor pairings like Chicken Kosha toppings, Gondhoraj dressings, and spicy Tandoori fusions created by local culinary artisans.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="card-icon"><i class="fas fa-couch"></i></div>
+        <h3>Themed Cozy Interiors</h3>
+        <p>Immerse yourself in our beautifully detailed floral wallpaper panels, glowing chandeliers, and comfortable seating that sets a perfect dining mood.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Signature Dishes -->
+  <section id="signature" class="signature-section">
+    <div class="section-header">
+      <span class="section-subtitle">House Favorites</span>
+      <h2 class="section-title">Most Loved Creations</h2>
+    </div>
+    
+    <div class="signature-grid">
+      <!-- Dish 1 -->
+      <div class="signature-card">
+        <div class="card-img-holder">
+          <img src="assets/kosha_pizza.png" alt="Chicken Kosha Pizza">
+          <span class="badge-tag">Signature</span>
+        </div>
+        <div class="card-details">
+          <h3>Chicken Kosha Pizza</h3>
+          <p class="dish-desc">Traditional slow-cooked spicy chicken chunks layered with caramelized onions, bell peppers, and bubbling mozzarella cheese.</p>
+          <span class="dish-price">₹280</span>
+        </div>
+      </div>
+      
+      <!-- Dish 2 -->
+      <div class="signature-card">
+        <div class="card-img-holder">
+          <img src="assets/tandoori_pizza.png" alt="Tandoori Burst Pizza">
+          <span class="badge-tag">Spicy</span>
+        </div>
+        <div class="card-details">
+          <h3>Tandoori Burst Pizza</h3>
+          <p class="dish-desc">Succulent tandoori chicken tikka, spicy seekh kebab slices, red onion flakes, and cilantro over a smoky marinara base.</p>
+          <span class="dish-price">₹290</span>
+        </div>
+      </div>
+      
+      <!-- Dish 3 -->
+      <div class="signature-card">
+        <div class="card-img-holder">
+          <img src="assets/gondhoraj_wrap.png" alt="Gondhoraj Chicken Wrap">
+          <span class="badge-tag">Zesty</span>
+        </div>
+        <div class="card-details">
+          <h3>Gondhoraj Lime Chicken Wrap</h3>
+          <p class="dish-desc">Juicy chicken malai kebab strips, fresh greens, red onions, wrapped tightly with our signature aromatic Gondhoraj lemon mayonnaise.</p>
+          <span class="dish-price">₹160</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Complete Menu -->
+  <section id="menu" class="menu-section">
+    <div class="section-header">
+      <span class="section-subtitle">Our Menu</span>
+      <h2 class="section-title">Explore Flavors Without Limits</h2>
+    </div>
+    
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="filterMenu('all')">All Dishes</button>
+      <button class="tab-btn" onclick="filterMenu('pizzas')">Pizzas</button>
+      <button class="tab-btn" onclick="filterMenu('starters')">Snacks & Kebabs</button>
+      <button class="tab-btn" onclick="filterMenu('drinks')">Mocktails & Shakes</button>
+    </div>
+    
+    <div class="menu-grid" id="menuGrid">
+      <!-- Item 1 (Pizza) -->
+      <div class="menu-item" data-category="pizzas">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Veg Margherita Pizza</h4>
+            <span class="menu-price">₹180</span>
+          </div>
+          <p>Classic fresh basil leaves, house tomato sauce, rich mozzarella, and a drizzle of premium olive oil.</p>
+        </div>
+      </div>
+      
+      <!-- Item 2 (Pizza) -->
+      <div class="menu-item" data-category="pizzas">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Chicken Kosha Pizza</h4>
+            <span class="menu-price">₹280</span>
+          </div>
+          <p>Traditional slow-cooked spicy chicken chunks layered with caramelized onions, bell peppers, and bubbling mozzarella.</p>
+        </div>
+      </div>
+      
+      <!-- Item 3 (Pizza) -->
+      <div class="menu-item" data-category="pizzas">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Tandoori Burst Pizza</h4>
+            <span class="menu-price">₹290</span>
+          </div>
+          <p>Smoky tandoori chicken tikka, seekh kebab slices, red onion, and fresh cilantro on crisp crust.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 (Starter) -->
+      <div class="menu-item" data-category="starters">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Chicken Reshmi Kebab</h4>
+            <span class="menu-price">₹220</span>
+          </div>
+          <p>Tender chicken breast pieces marinated in cream, cashew paste, yogurt, and charcoal grilled to perfection.</p>
+        </div>
+      </div>
+      
+      <!-- Item 5 (Starter) -->
+      <div class="menu-item" data-category="starters">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Drums of Heaven</h4>
+            <span class="menu-price">₹240</span>
+          </div>
+          <p>Crispy chicken lollipops tossed in a sweet, sour, and spicy honey-chilli glaze with sesame sprinkles.</p>
+        </div>
+      </div>
+      
+      <!-- Item 6 (Starter) -->
+      <div class="menu-item" data-category="starters">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Gondhoraj Lime Chicken Wrap</h4>
+            <span class="menu-price">₹160</span>
+          </div>
+          <p>Juicy chicken malai kebab strips, fresh greens, red onions, wrapped in a warm flatbread with Gondhoraj lime cream.</p>
+        </div>
+      </div>
+
+      <!-- Item 7 (Drink) -->
+      <div class="menu-item" data-category="drinks">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Gondhoraj Chilli Punch</h4>
+            <span class="menu-price">₹110</span>
+          </div>
+          <p>Fragrant Bengal Gondhoraj lime juice blended with soda, fresh mint leaves, crushed ice, and a pinch of green chilli zest.</p>
+        </div>
+      </div>
+      
+      <!-- Item 8 (Drink) -->
+      <div class="menu-item" data-category="drinks">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h4>Belgian Chocolate Shake</h4>
+            <span class="menu-price">₹140</span>
+          </div>
+          <p>Thick, rich chocolate shake served in a chilled jar glass, drizzled with deep dark chocolate syrup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Wavy Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-header">
+      <span class="section-subtitle">Vibe Check</span>
+      <h2 class="section-title">Taste the Vibes Through Our Gallery</h2>
+    </div>
+    
+    <div class="wavy-gallery-wrapper">
+      <div class="polaroid-card" style="--rotation: -3deg;" onclick="openLightbox('assets/pizza_signature.jpg')">
+        <img src="assets/pizza_signature.jpg" alt="Signature Pizza close up">
+        <div class="caption">Signature Thin Crust</div>
+      </div>
+      
+      <div class="polaroid-card" style="--rotation: 4deg;" onclick="openLightbox('assets/chicken_lollipops.jpg')">
+        <img src="assets/chicken_lollipops.jpg" alt="Crispy Chicken Lollipops">
+        <div class="caption">Crispy Drums of Heaven</div>
+      </div>
+      
+      <div class="polaroid-card" style="--rotation: -2deg;" onclick="openLightbox('assets/red_mocktail.jpg')">
+        <img src="assets/red_mocktail.jpg" alt="Zesty Red Mocktail">
+        <div class="caption">Fresh Berries Mocktail</div>
+      </div>
+      
+      <div class="polaroid-card" style="--rotation: 3deg;" onclick="openLightbox('assets/pizza_skillet.jpg')">
+        <img src="assets/pizza_skillet.jpg" alt="Skillet Hot Pizza">
+        <div class="caption">Fresh From Oven</div>
+      </div>
+      
+      <div class="polaroid-card" style="--rotation: -4deg;" onclick="openLightbox('assets/shake_bottle.jpg')">
+        <img src="assets/shake_bottle.jpg" alt="Chocolate Shake Jar">
+        <div class="caption">Rich Chocolate Shake</div>
+      </div>
+
+      <div class="polaroid-card" style="--rotation: 2deg;" onclick="openLightbox('assets/kebab_flower.jpg')">
+        <img src="assets/kebab_flower.jpg" alt="Artisanal Kebabs Platter">
+        <div class="caption">Artisanal Kebab Platter</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — Memory Wall -->
+  <section id="memories" class="memories-section">
+    <div class="section-header">
+      <span class="section-subtitle">Memory Wall</span>
+      <h2 class="section-title">Unforgettable Guest Moments</h2>
+    </div>
+    
+    <div class="memories-grid">
+      <div class="memory-card" onclick="openLightbox('assets/bengali_thali.jpg')">
+        <img src="assets/bengali_thali.jpg" alt="Thali Feast Celebration">
+        <div class="memory-overlay">
+          <h4>Family Feast Celebration</h4>
+          <p>Gatherings filled with smiles, laughter, and heavy tables.</p>
+        </div>
+      </div>
+      
+      <div class="memory-card" onclick="openLightbox('assets/catering_layout.jpg')">
+        <img src="assets/catering_layout.jpg" alt="Delightful catering dishes">
+        <div class="memory-overlay">
+          <h4>Multi-Cuisine Buffet Layouts</h4>
+          <p>Delighting guests with customized birthday and event spreads.</p>
+        </div>
+      </div>
+      
+      <div class="memory-card" onclick="openLightbox('assets/cozy_interior.png')">
+        <img src="assets/cozy_interior.png" alt="Cosy seating arrangements">
+        <div class="memory-overlay">
+          <h4>Weekend Hangout Spot</h4>
+          <p>A cosy hub for friends sharing slices and stories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — Customer Reviews -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-header">
+      <span class="section-subtitle">Guest Feedbacks</span>
+      <h2 class="section-title">What Our Diners Say</h2>
+    </div>
+    
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="reviewer-name">Amit Sengupta</span>
+          <span class="reviewer-sub">Local Guide • Keranitola</span>
+        </div>
+        <p class="review-body">"Bong Pizza is my absolute favorite place in Medinipur for fusion food. The Chicken Kosha Pizza has the perfect kick of spicy spices mixed with melting cheese! Truly a touch of Bengal."</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      
+      <!-- Review 2 (Highlighted) -->
+      <div class="review-card highlighted">
+        <div class="review-meta">
+          <span class="reviewer-name">Debolina Das</span>
+          <span class="reviewer-sub">Customer Review • Midnapore Station Rd</span>
+        </div>
+        <p class="review-body">"I was amazed by their beautiful cozy interior design, but the food blew me away. The Gondhoraj Mocktail is extremely refreshing. Very friendly staff and great service."</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="reviewer-name">Rahul Banerjee</span>
+          <span class="reviewer-sub">Food Blogger • Midnapore</span>
+        </div>
+        <p class="review-body">"Exceptional quality hand-stretched dough. The Tandoori Burst Pizza is well spiced. Highly recommend ordering bulk platters for birthdays. Definitely worth checking out!"</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — About Us -->
+  <section id="about" class="about-section">
+    <div class="about-grid">
+      <div class="about-image-column">
+        <img src="assets/themed_interior.jpg" alt="Our Themed Cozy Interior Area" class="about-main-img">
+        <img src="assets/interior_fireplace.jpg" alt="Cozy decor element panel" class="about-sub-img">
+      </div>
+      
+      <div class="about-content-column">
+        <span class="badge-pill">Our Journey</span>
+        <h2>Where Italian Crafts Meet Bengali Soul</h2>
+        <p class="about-lead">Founded in the historic town of Medinipur, Bong Pizza was born from a simple realization: food is a language of connection.</p>
+        <p>We set out to create a cozy dining space that celebrates our roots. Every slice of pizza we serve blends premium Italian techniques—like proofing dough over hours—with traditional, intensely spiced curries, kebabs, and citrus notes beloved across Bengal.</p>
+        <p>From cozy dinners for couples to large birthday buffets, our space near Midnapore Railway Station road is designed to build memories, one delightful bite at a time.</p>
+        
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-number">5+</span>
+            <span class="stat-lbl">Years Serving</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">20K+</span>
+            <span class="stat-lbl">Happy Diners</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">15+</span>
+            <span class="stat-lbl">Signature Recipes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10 — Location & Business Hours -->
+  <section class="location-section">
+    <div class="location-grid">
+      <div class="location-info-card">
+        <span class="badge-pill">Find Us</span>
+        <h2>Visit Bong Pizza</h2>
+        
+        <div class="info-block">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <h4>Address</h4>
+            <p>Ward No. 5, Holding No. 287/A, Midnapore Railway Station Rd, near Rangamati, Bidhan Nagar East, Medinipur, West Bengal 721101</p>
+          </div>
+        </div>
+        
+        <div class="info-block">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-text">
+            <h4>Operating Hours</h4>
+            <p>Everyday: 11:00 AM – 11:30 PM</p>
+          </div>
+        </div>
+        
+        <div class="info-block">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-text">
+            <h4>Contact Numbers</h4>
+            <p>+91 98765 43210 / +91 87654 32109</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.084196160456!2d87.30827101188338!3d22.42186437970929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d4187212457fb%3A0xe54e60741270c5eb!2sBong%20Pizza%20Medinipur!5e0!3m2!1sen!2sin!4v1782369800000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — Reservation & Quick Action -->
+  <section id="contact" class="reservation-section">
+    <div class="reservation-box">
+      <div class="res-heading">
+        <span class="badge-pill">Reserve Space</span>
+        <h2>Secure Your Spot Today</h2>
+        <p>Avoid long queues during peak evening hours. Book a cozy table instantly for your family or friends.</p>
+      </div>
+      
+      <form class="reservation-form" onsubmit="event.preventDefault(); alert('Reservation requested! We will call you shortly to confirm.');">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        
+        <div class="form-row">
+          <input type="number" placeholder="Guests count" min="1" required>
+          <input type="datetime-local" required>
+        </div>
+        
+        <button type="submit" class="btn-primary w-full">Request Table Booking</button>
+      </form>
+      
+      <div class="quick-contact-actions">
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20reserve%20a%20table%20at%20Bong%20Pizza%20Medinipur." class="btn-outline wa-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="tel:+919876543210" class="btn-outline call-btn">
+          <i class="fas fa-phone-alt"></i> Call Direct Support
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 — Premium Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <h2 class="footer-logo">BONG PIZZA.</h2>
+        <p class="footer-tag">A Touch of Bengal, A Slice of Italy. Serving handcrafted memories in Midnapore since 2021.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links-col">
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#menu">Complete Menu</a>
+          <a href="#gallery">Vibe Gallery</a>
+          <a href="#reviews">Dinners Reviews</a>
+        </div>
+      </div>
+      
+      <div class="footer-subscribe-col">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to receive festive discounts, holiday hours, and new signature pizza alerts.</p>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit" aria-label="Submit Email"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bong Pizza Medinipur. All rights reserved. Developed to premium agency specifications.</p>
+      <div class="footer-policy-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Popup Container -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="Lightbox Zoom View">
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
