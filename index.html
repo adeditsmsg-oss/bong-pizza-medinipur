@@ -412,6 +412,75 @@
     </div>
   </section>
 
+  <!-- SECTION 7.5 — Share Your Experience (Reputation Management) -->
+  <section id="feedback" class="feedback-section">
+    <div class="feedback-box">
+      <div class="section-header">
+        <span class="section-subtitle">Share Your Experience</span>
+        <h2 class="section-title">Your feedback helps us improve and serve you better.</h2>
+      </div>
+      
+      <div class="rating-interactive-container" id="ratingInteractive">
+        <p class="rating-prompt">How would you rate your dining experience with us?</p>
+        <div class="interactive-stars" id="interactiveStars">
+          <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
+          <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
+          <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
+          <i class="far fa-star star-btn" data-value="4" role="button" aria-label="4 Stars"></i>
+          <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
+        </div>
+        <p class="rating-value-label" id="ratingValueLabel">Tap a star to rate</p>
+        <button class="btn-primary" id="submitRatingBtn" disabled>Submit Review</button>
+      </div>
+
+      <!-- Positive Feedback Success Message -->
+      <div class="positive-success-message" id="positiveSuccess" style="display: none;">
+        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+        <p class="success-txt">Thank you for your wonderful feedback! We'd really appreciate it if you could share your experience on Google.</p>
+        <a href="#" id="googleReviewBtn" class="btn-primary" target="_blank">Leave a Google Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Dialog Modal (for < 4 stars) -->
+  <div class="modal-overlay" id="feedbackModal" style="display: none;">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeFeedbackModal" aria-label="Close Modal">&times;</button>
+      <h3>We value your feedback</h3>
+      <p>Please let us know how we can improve. Your input will be sent directly to our management team.</p>
+      
+      <form class="feedback-modal-form" id="negativeFeedbackForm">
+        <div class="form-row-modal">
+          <div class="form-group">
+            <label for="fbName">Name *</label>
+            <input type="text" id="fbName" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="fbPhone">Phone Number *</label>
+            <input type="tel" id="fbPhone" required placeholder="Enter phone number">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="fbEmail">Email (Optional)</label>
+          <input type="email" id="fbEmail" placeholder="Enter your email address">
+        </div>
+        
+        <div class="form-group">
+          <label for="fbWrong">Tell us what went wrong *</label>
+          <textarea id="fbWrong" rows="3" required placeholder="Describe the issue you experienced"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="fbImprove">How can we improve? *</label>
+          <textarea id="fbImprove" rows="3" required placeholder="Suggest improvements for us"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary w-full">Send Feedback</button>
+      </form>
+    </div>
+  </div>
+
   <!-- SECTION 8 — Customer Reviews -->
   <section id="reviews" class="reviews-section">
     <div class="section-header">
