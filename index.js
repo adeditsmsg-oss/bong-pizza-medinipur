@@ -1,7 +1,7 @@
 // INTERACTIVE CONTROLS FOR BONG PIZZA WEBSITE
 
 // CONFIGURATION FOR GOOGLE REVIEWS & REPUTATION MANAGEMENT
-const GOOGLE_REVIEW_URL = "https://www.google.co.in/maps/place/Bong+Pizza+Medinipur/@22.4218644,87.3078848,17z/data=!4m8!3m7!1s0x3a1d5be5cc55e1dd:0x93e31162ab3c5cc4!8m2!3d22.4218644!4d87.3104597!9m1!1b1!16s%2Fg%2F11ml2jpyd1?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D";
+const GOOGLE_REVIEW_URL = "https://reviewflowai.in/index.php?route=review/ChIJqS7gNgBbHToRzB52JkJE4Ug";
 const OWNER_WHATSAPP_NUMBER = "919876543210"; // Configurable owner WhatsApp
 const SAVE_TO_EXTERNAL_API = false;          // Optional storage config
 const EXTERNAL_API_URL = "https://api.yourdomain.com/feedback";
@@ -162,13 +162,55 @@ function initReputationManagement() {
   const positiveSuccess = document.getElementById('positiveSuccess');
   const googleReviewBtn = document.getElementById('googleReviewBtn');
   
+  const ratingModal = document.getElementById('ratingModal');
+  const closeRatingModal = document.getElementById('closeRatingModal');
   const feedbackModal = document.getElementById('feedbackModal');
   const closeFeedbackModal = document.getElementById('closeFeedbackModal');
   const negativeFeedbackForm = document.getElementById('negativeFeedbackForm');
 
   let selectedRating = 0;
+  let popupInterval = null;
 
   if (!stars.length || !submitBtn) return;
+
+  // Timer popup logic (always pops up every 10 seconds if not completed)
+  function showRatingPopup() {
+    if (ratingModal && ratingModal.style.display === 'none' && feedbackModal.style.display === 'none') {
+      ratingModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function startPopupTimer() {
+    if (popupInterval) clearInterval(popupInterval);
+    popupInterval = setInterval(showRatingPopup, 10000);
+  }
+
+  function stopPopupTimer() {
+    if (popupInterval) {
+      clearInterval(popupInterval);
+      popupInterval = null;
+    }
+  }
+
+  // Initial trigger after 10 seconds and repeat interval
+  setTimeout(showRatingPopup, 10000);
+  startPopupTimer();
+
+  // Rating Modal Close logic (restarts popup cycle)
+  if (closeRatingModal && ratingModal) {
+    closeRatingModal.addEventListener('click', () => {
+      ratingModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    ratingModal.addEventListener('click', (e) => {
+      if (e.target === ratingModal) {
+        ratingModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
 
   // Star Ratings Interactive Logic
   stars.forEach(star => {
@@ -198,6 +240,9 @@ function initReputationManagement() {
         positiveSuccess.style.display = 'flex';
         googleReviewBtn.href = GOOGLE_REVIEW_URL;
         
+        // Stop the popup timer permanently
+        stopPopupTimer();
+        
         // Open Google review URL immediately
         window.open(GOOGLE_REVIEW_URL, '_blank');
       } else {
@@ -224,6 +269,12 @@ function initReputationManagement() {
   // Handle Review Submission
   submitBtn.addEventListener('click', () => {
     if (selectedRating < 4 && selectedRating > 0) {
+      // Hide rating modal
+      if (ratingModal) ratingModal.style.display = 'none';
+      
+      // Stop popup timer
+      stopPopupTimer();
+
       // 1, 2, or 3 stars flow: Modal feedback Form
       feedbackModal.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Lock background scroll

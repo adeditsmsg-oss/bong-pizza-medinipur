@@ -412,35 +412,39 @@
     </div>
   </section>
 
-  <!-- SECTION 7.5 — Share Your Experience (Reputation Management) -->
-  <section id="feedback" class="feedback-section">
-    <div class="feedback-box">
-      <div class="section-header">
-        <span class="section-subtitle">Share Your Experience</span>
-        <h2 class="section-title">Your feedback helps us improve and serve you better.</h2>
-      </div>
+  <!-- SECTION 7.5 — Share Your Experience (Reputation Management Popup Modal) -->
+  <div class="modal-overlay" id="ratingModal" style="display: none;">
+    <div class="modal-card rating-modal-card">
+      <button class="modal-close-btn" id="closeRatingModal" aria-label="Close Rating Modal">&times;</button>
       
-      <div class="rating-interactive-container" id="ratingInteractive">
-        <p class="rating-prompt">Rate your experience to get a discount code & a chance to win a free pizza!</p>
-        <div class="interactive-stars" id="interactiveStars">
-          <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
-          <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
-          <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
-          <i class="far fa-star star-btn" data-value="4" role="button" aria-label="4 Stars"></i>
-          <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
+      <div class="feedback-box" style="border: none; padding: 0; box-shadow: none;">
+        <div class="section-header" style="margin-bottom: 30px;">
+          <span class="section-subtitle">Share Your Experience</span>
+          <h2 class="section-title" style="font-size: 2rem;">Your feedback helps us improve and serve you better.</h2>
         </div>
-        <p class="rating-value-label" id="ratingValueLabel">Tap a star to rate</p>
-        <button class="btn-primary" id="submitRatingBtn" style="display: none;">Submit Review</button>
-      </div>
+        
+        <div class="rating-interactive-container" id="ratingInteractive">
+          <p class="rating-prompt">Rate your experience to get a discount code & a chance to win a free pizza!</p>
+          <div class="interactive-stars" id="interactiveStars">
+            <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
+            <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
+            <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
+            <i class="far fa-star star-btn" data-value="4" role="button" aria-label="4 Stars"></i>
+            <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
+          </div>
+          <p class="rating-value-label" id="ratingValueLabel">Tap a star to rate</p>
+          <button class="btn-primary" id="submitRatingBtn" style="display: none;">Submit Review</button>
+        </div>
 
-      <!-- Positive Feedback Success Message -->
-      <div class="positive-success-message" id="positiveSuccess" style="display: none;">
-        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-        <p class="success-txt">Thank you for your wonderful feedback! We have opened Google Reviews in a new tab so you can share your experience, claim your discount, and enter to win a free pizza.</p>
-        <a href="#" id="googleReviewBtn" class="btn-primary" target="_blank">Leave a Google Review</a>
+        <!-- Positive Feedback Success Message -->
+        <div class="positive-success-message" id="positiveSuccess" style="display: none;">
+          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+          <p class="success-txt">Thank you for your wonderful feedback! We have opened Google Reviews in a new tab so you can share your experience, claim your discount, and enter to win a free pizza.</p>
+          <a href="#" id="googleReviewBtn" class="btn-primary" target="_blank">Leave a Google Review</a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Feedback Dialog Modal (for < 4 stars) -->
   <div class="modal-overlay" id="feedbackModal" style="display: none;">

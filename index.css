@@ -1528,6 +1528,11 @@ p {
   }
 }
 
+.rating-modal-card {
+  max-width: 580px;
+  padding: 50px 40px;
+}
+
 /* RESPONSIVE BREAKPOINTS (MANDATORY) */
 
 /* Widescreen adjustments */
