@@ -1,8 +1,8 @@
-// INTERACTIVE CONTROLS FOR BONG PIZZA WEBSITE
+// INTERACTIVE CONTROLS FOR MOM'S KITCHEN WEBSITE
 
 // CONFIGURATION FOR GOOGLE REVIEWS & REPUTATION MANAGEMENT
 const GOOGLE_REVIEW_URL = "https://reviewflowai.in/index.php?route=review/ChIJqS7gNgBbHToRzB52JkJE4Ug";
-const OWNER_WHATSAPP_NUMBER = "919876543210"; // Configurable owner WhatsApp
+const OWNER_WHATSAPP_NUMBER = "918250569116"; // Mom's Kitchen WhatsApp
 const SAVE_TO_EXTERNAL_API = false;          // Optional storage config
 const EXTERNAL_API_URL = "https://api.yourdomain.com/feedback";
 
@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initReputationManagement();
+  initOrderForm();
 });
 
 // 1. Sticky Navigation on Scroll
 function initStickyNavbar() {
   const navbarContainer = document.querySelector('.navbar-container');
+  if (!navbarContainer) return;
   
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -75,7 +77,7 @@ window.filterMenu = function(category) {
     const itemCategory = item.getAttribute('data-category');
     
     if (category === 'all' || itemCategory === category) {
-      item.style.display = 'block';
+      item.style.display = 'flex';
       setTimeout(() => {
         item.style.opacity = '1';
         item.style.transform = 'translateY(0)';
@@ -118,7 +120,7 @@ document.addEventListener('keydown', (e) => {
 function initScrollReveal() {
   const revealElements = [
     ...document.querySelectorAll('.feature-card'),
-    ...document.querySelectorAll('.signature-card'),
+    ...document.querySelectorAll('.menu-item'),
     ...document.querySelectorAll('.review-card'),
     ...document.querySelectorAll('.about-content-column'),
     ...document.querySelectorAll('.location-grid')
@@ -153,7 +155,7 @@ function initScrollReveal() {
   });
 }
 
-// 6. Google Review Reputation Management System
+// 6. Google Review Reputation Management System (Timed Modal Popup)
 function initReputationManagement() {
   const stars = document.querySelectorAll('#interactiveStars .star-btn');
   const submitBtn = document.getElementById('submitRatingBtn');
@@ -348,4 +350,32 @@ function initReputationManagement() {
       alert('Thank you for your feedback! We will get in touch with you shortly.');
     });
   }
+}
+
+// 7. WhatsApp Order / Inquiry Form Submit Handler
+function initOrderForm() {
+  const orderForm = document.getElementById('whatsappOrderForm');
+  if (!orderForm) return;
+
+  orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('orderName').value;
+    const phone = document.getElementById('orderPhone').value;
+    const details = document.getElementById('orderDetails').value;
+    const type = document.getElementById('orderType').value;
+    const notes = document.getElementById('orderNotes').value || 'None';
+
+    // Compile WhatsApp preorder text
+    const rawMsg = `💬 New Momo Order / Inquiry - Mom's Kitchen\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📦 Order Type: ${type}\n\n🍽️ Order Details:\n${details}\n\n📝 Special Notes:\n${notes}`;
+    const encodedMsg = encodeURIComponent(rawMsg);
+    const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodedMsg}`;
+
+    // Open WhatsApp Redirect
+    window.open(waUrl, '_blank');
+
+    // Reset order form
+    orderForm.reset();
+    alert('Your order details have been compiled! We are redirecting you to WhatsApp to complete your order.');
+  });
 }

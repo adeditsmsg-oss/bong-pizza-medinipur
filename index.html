@@ -3,428 +3,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bong Pizza Medinipur | A Touch of Bengal, A Slice of Italy</title>
-  <meta name="description" content="Experience Medinipur's premier fusion dining. Famous for hand-rolled pizzas, Chicken Kosha Pizza, signature kebabs, and zesty Gondhoraj infusions. Located near Midnapore Railway Station.">
+  <title>Mom's Kitchen — Best Momo Shop in Midnapore</title>
+  <meta name="description" content="Enjoy the best steamed, fried, Schezwan, and tandoori momos at Mom's Kitchen (মা'এস কিচেন), Rabindra Nagar, Midnapore. Homely, fresh, and 100% hygienic.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome for Icons -->
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Design System CSS -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <!-- SECTION 1 — Sticky Navigation -->
+  <!-- NAVIGATION NAVBAR -->
   <header class="navbar-container">
-    <nav class="navbar">
-      <div class="nav-links-left">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Why Us</a>
-        <a href="#signature">Signature</a>
-      </div>
-      
+    <div class="navbar-content">
       <div class="logo-wrapper">
-        <a href="#home" class="logo-brand-img">
-          <img src="assets/logo.jpg" alt="Bong Pizza Logo" class="brand-logo-image">
+        <a href="#" class="logo-brand">
+          <img src="assets/logo.png" alt="Mom's Kitchen Logo" class="logo-brand-img">
+          <div class="logo-text-group">
+            <span class="logo-main-text">Mom's Kitchen</span>
+            <span class="logo-sub-text">মা'এস কিচেন</span>
+          </div>
         </a>
       </div>
       
-      <div class="nav-links-right">
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact" class="nav-cta">Book Table</a>
-      </div>
+      <!-- Desktop Links -->
+      <nav class="nav-links-left">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#features" class="nav-link">Why Us</a>
+        <a href="#menu" class="nav-link">Our Menu</a>
+      </nav>
+      
+      <nav class="nav-links-right">
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#location" class="nav-link">Visit Us</a>
+        <a href="#order" class="btn-primary btn-nav">Order Now</a>
+      </nav>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <!-- Hamburger Menu toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-    </nav>
+    </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#home" class="drawer-link">Home</a>
-    <a href="#about" class="drawer-link">About</a>
-    <a href="#features" class="drawer-link">Why Us</a>
-    <a href="#signature" class="drawer-link">Signature</a>
-    <a href="#menu" class="drawer-link">Menu</a>
-    <a href="#gallery" class="drawer-link">Gallery</a>
-    <a href="#reviews" class="drawer-link">Reviews</a>
-    <a href="#contact" class="drawer-link drawer-cta">Book a Table</a>
+    <div class="drawer-header">
+      <span class="drawer-title">Navigation</span>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#features" class="drawer-link">Why Us</a>
+      <a href="#menu" class="drawer-link">Our Menu</a>
+      <a href="#gallery" class="drawer-link">Gallery</a>
+      <a href="#location" class="drawer-link">Visit Us</a>
+      <a href="#order" class="btn-primary drawer-btn">Order Now</a>
+    </nav>
   </div>
 
-  <!-- SECTION 2 — Hero Section -->
-  <section id="home" class="hero-section">
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
     <div class="hero-content">
-      <span class="badge-pill">Premium Multi-Cuisine Dining</span>
-      <h1 class="hero-title">Experience the Language of Taste</h1>
-      <p class="hero-subtitle">Where traditional Bengal spices embrace classic Italian fire. Home to the legendary Chicken Kosha Pizza and hand-rolled delicacies in the heart of Medinipur.</p>
+      <div class="hero-badge">
+        <i class="fas fa-star text-gold"></i>
+        <span>4.8 Rating (31 Google Reviews)</span>
+      </div>
+      <h1 class="hero-title">Steaming Hot, Handcrafted with Love</h1>
+      <p class="hero-subtitle">Experience the taste of mom's hands. The cleanest open kitchen serving steamed, fried, Schezwan, and tandoori momos in Midnapore.</p>
       
       <div class="hero-actions">
-        <a href="#menu" class="btn-primary">Explore Menu</a>
-        <a href="#contact" class="btn-outline">Find Our Location</a>
+        <a href="#menu" class="btn-primary">View Menu</a>
+        <a href="#order" class="btn-secondary">Pre-Order Now</a>
       </div>
-
-      <!-- Trust Badge -->
-      <div class="rating-badge">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <span class="rating-text"><strong>4.3 / 5</strong> on Google Reviews (500+ ratings)</span>
+      
+      <div class="hero-business-info">
+        <div class="info-pill"><i class="fas fa-motorcycle"></i> Dine-in & Drive-through</div>
+        <div class="info-pill"><i class="fas fa-clock"></i> Open 11:00 AM - 10:00 PM</div>
       </div>
     </div>
     
-    <div class="hero-image-wrapper">
-      <img src="assets/hero_pizza.png" alt="Signature Bong Pizza" class="hero-img">
-      <!-- Circular Floating CTA badge -->
-      <a href="#contact" class="floating-circle-cta">
-        <svg viewBox="0 0 100 100">
-          <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
-          <text><textPath href="#circlePath">BOOK A TABLE • RESERVE NOW • </textPath></text>
-        </svg>
-        <div class="circle-arrow">
-          <i class="fas fa-arrow-down"></i>
+    <div class="hero-image-column">
+      <div class="hero-image-wrapper">
+        <img src="assets/steamed_momos.png" alt="Steamed Dumplings in Bamboo Steamer" class="hero-main-img">
+        <div class="floating-badge badge-top">
+          <i class="fas fa-award"></i>
+          <span>100% Hygienic</span>
         </div>
-      </a>
+        <div class="floating-badge badge-bottom">
+          <i class="fas fa-fire"></i>
+          <span>Spicy Chili Chutney</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 3 — Why Customers Love Us -->
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <div class="about-grid">
+      <div class="about-image-column">
+        <div class="polaroid-collage">
+          <div class="polaroid-photo rotate-left">
+            <img src="assets/logo.png" alt="Mom's Kitchen Setup">
+            <p>Our Clean Kitchen</p>
+          </div>
+          <div class="polaroid-photo rotate-right">
+            <img src="assets/tandoori_momos.png" alt="Chef Special Momos">
+            <p>Smoky Tandoori Momos</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-content-column">
+        <span class="section-subtitle">Our Story</span>
+        <h2 class="section-title">The Taste of Mom's Hand in Every Fold</h2>
+        <p class="about-text">At Mom's Kitchen, the owner crafts every dish right in front of you in one of the cleanest setups you will find in Midnapore. It justifies its name—homely, hygienic, and reasonable food that reminds you of home.</p>
+        
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">4.8</span>
+            <span class="stat-label">Google Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Hygienic Setup</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">₹1–200</span>
+            <span class="stat-label">Budget Friendly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (WHY US) SECTION -->
   <section id="features" class="features-section">
     <div class="section-header">
-      <span class="section-subtitle">Why Diner's Choose Us</span>
-      <h2 class="section-title">Blending Tradition & Innovation</h2>
+      <span class="section-subtitle">Why Choose Us</span>
+      <h2 class="section-title">Hygienic, Healthy & Homemade</h2>
     </div>
     
     <div class="features-grid">
+      <!-- Feature 1 -->
       <div class="feature-card">
-        <div class="card-icon"><i class="fas fa-pizza-slice"></i></div>
-        <h3>Artisanal Hand-Rolled Dough</h3>
-        <p>Our pizzas are built on scratch-made dough, proofed slowly, and hand-stretched for a crispy, airy crust that defines true craftsmanship.</p>
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3>100% Open & Hygienic</h3>
+        <p>Watch your food being prepared fresh right in front of your eyes. Clean utensils, filtered water, and spotless countertops are our promise.</p>
       </div>
       
+      <!-- Feature 2 -->
       <div class="feature-card highlighted">
-        <div class="card-icon"><i class="fas fa-pepper-hot"></i></div>
-        <h3>Bengal-Italian Fusion</h3>
-        <p>Savor rich local flavor pairings like Chicken Kosha toppings, Gondhoraj dressings, and spicy Tandoori fusions created by local culinary artisans.</p>
+        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+        <h3>Zero Artificial Colors</h3>
+        <p>We do not use artificial food colors, chemical preservatives, or excess MSG. Healthy, digestible momos cooked with motherly care.</p>
       </div>
       
+      <!-- Feature 3 -->
       <div class="feature-card">
-        <div class="card-icon"><i class="fas fa-couch"></i></div>
-        <h3>Themed Cozy Interiors</h3>
-        <p>Immerse yourself in our beautifully detailed floral wallpaper panels, glowing chandeliers, and comfortable seating that sets a perfect dining mood.</p>
+        <div class="feature-icon"><i class="fas fa-pepper-hot"></i></div>
+        <h3>Signature Hot Chutney</h3>
+        <p>Our red garlic chutney is ground fresh daily using premium spices. Perfectly fiery, accompanied by sweet mayonnaise and green mint yogurt.</p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4 — Signature Dishes -->
-  <section id="signature" class="signature-section">
-    <div class="section-header">
-      <span class="section-subtitle">House Favorites</span>
-      <h2 class="section-title">Most Loved Creations</h2>
-    </div>
-    
-    <div class="signature-grid">
-      <!-- Dish 1 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/kosha_pizza.png" alt="Chicken Kosha Pizza">
-          <span class="badge-tag">Signature</span>
-        </div>
-        <div class="card-details">
-          <h3>Chicken Kosha Pizza</h3>
-          <p class="dish-desc">Traditional slow-cooked spicy chicken chunks layered with caramelized onions, bell peppers, and bubbling mozzarella cheese.</p>
-          <span class="dish-price">₹280</span>
-        </div>
-      </div>
-      
-      <!-- Dish 2 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/tandoori_pizza.png" alt="Tandoori Burst Pizza">
-          <span class="badge-tag">Spicy</span>
-        </div>
-        <div class="card-details">
-          <h3>Tandoori Burst Pizza</h3>
-          <p class="dish-desc">Succulent tandoori chicken tikka, spicy seekh kebab slices, red onion flakes, and cilantro over a smoky marinara base.</p>
-          <span class="dish-price">₹290</span>
-        </div>
-      </div>
-      
-      <!-- Dish 3 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/pesto_garlic_bread.jpg" alt="Pesto Garlic Bread">
-          <span class="badge-tag">Fresh Baked</span>
-        </div>
-        <div class="card-details">
-          <h3>Pesto Garlic Bread</h3>
-          <p class="dish-desc">Toasted French baguette slices smeared with home-style basil pesto sauce, loaded with bubbling melted mozzarella cheese.</p>
-          <span class="dish-price">₹140</span>
-        </div>
-      </div>
-
-      <!-- Dish 4 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/gondhoraj_wrap.png" alt="Gondhoraj Chicken Wrap">
-          <span class="badge-tag">Zesty</span>
-        </div>
-        <div class="card-details">
-          <h3>Gondhoraj Lime Chicken Wrap</h3>
-          <p class="dish-desc">Juicy chicken malai kebab strips, fresh greens, red onions, wrapped tightly with our signature aromatic Gondhoraj lemon mayonnaise.</p>
-          <span class="dish-price">₹160</span>
-        </div>
-      </div>
-
-      <!-- Dish 5 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/curry_rice.jpg" alt="Biryani & Chicken Kosha Combo">
-          <span class="badge-tag">Traditional</span>
-        </div>
-        <div class="card-details">
-          <h3>Biryani & Kosha Combo</h3>
-          <p class="dish-desc">Fragrant long-grain Biryani rice served side-by-side with succulent chicken chunks slow-cooked in a rich spiced Bengali curry gravy.</p>
-          <span class="dish-price">₹260</span>
-        </div>
-      </div>
-
-      <!-- Dish 6 -->
-      <div class="signature-card">
-        <div class="card-img-holder">
-          <img src="assets/brownie_dessert.jpg" alt="Chocolate Fudge Brownie Sundae">
-          <span class="badge-tag">Decadent</span>
-        </div>
-        <div class="card-details">
-          <h3>Brownie Fudge Sundae</h3>
-          <p class="dish-desc">Rich hot chocolate fudge brownie pieces paired with cool vanilla ice cream and crispy rolled chocolate wafer sticks.</p>
-          <span class="dish-price">₹150</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5 — Complete Menu -->
+  <!-- MENU SECTION -->
   <section id="menu" class="menu-section">
     <div class="section-header">
-      <span class="section-subtitle">Our Menu</span>
-      <h2 class="section-title">Explore Flavors Without Limits</h2>
+      <span class="section-subtitle">Specials Menu</span>
+      <h2 class="section-title">Explore Our Momo Selection</h2>
     </div>
     
+    <!-- Tab Controls -->
     <div class="menu-tabs">
-      <button class="tab-btn active" onclick="filterMenu('all')">All Dishes</button>
-      <button class="tab-btn" onclick="filterMenu('pizzas')">Pizzas</button>
-      <button class="tab-btn" onclick="filterMenu('starters')">Snacks & Kebabs</button>
-      <button class="tab-btn" onclick="filterMenu('drinks')">Mocktails & Shakes</button>
+      <button class="tab-btn active" onclick="filterMenu('all')">All Momos</button>
+      <button class="tab-btn" onclick="filterMenu('steamed')">Steamed</button>
+      <button class="tab-btn" onclick="filterMenu('fried')">Fried & Crispy</button>
+      <button class="tab-btn" onclick="filterMenu('special')">Pan-Fried & Tandoori</button>
     </div>
     
-    <div class="menu-grid" id="menuGrid">
-      <!-- Item 1 (Pizza) -->
-      <div class="menu-item" data-category="pizzas">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Veg Margherita Pizza</h4>
-            <span class="menu-price">₹180</span>
-          </div>
-          <p>Classic fresh basil leaves, house tomato sauce, rich mozzarella, and a drizzle of premium olive oil.</p>
+    <!-- Menu Grid -->
+    <div class="menu-grid">
+      <!-- Item 1 -->
+      <div class="menu-item" data-category="steamed">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/steamed_momos.png" alt="Veg Steamed Momos">
         </div>
+        <div class="menu-item-header">
+          <h3>Veg Steamed Momos</h3>
+          <span class="menu-item-price">₹50</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of delicate dumplings packed with finely minced cabbage, carrots, onions, and garlic. Served with piping hot chili chutney.</p>
       </div>
       
-      <!-- Item 2 (Pizza) -->
-      <div class="menu-item" data-category="pizzas">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Chicken Kosha Pizza</h4>
-            <span class="menu-price">₹280</span>
-          </div>
-          <p>Traditional slow-cooked spicy chicken chunks layered with caramelized onions, bell peppers, and bubbling mozzarella.</p>
+      <!-- Item 2 -->
+      <div class="menu-item" data-category="steamed">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/steamed_momos.png" alt="Chicken Steamed Momos">
         </div>
+        <div class="menu-item-header">
+          <h3>Chicken Steamed Momos</h3>
+          <span class="menu-item-price">₹70</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of juicy, tender minced chicken dumplings wrapped in thin dough and steamed to perfection. Served with signature spicy chutney.</p>
       </div>
       
-      <!-- Item 3 (Pizza) -->
-      <div class="menu-item" data-category="pizzas">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Tandoori Burst Pizza</h4>
-            <span class="menu-price">₹290</span>
-          </div>
-          <p>Smoky tandoori chicken tikka, seekh kebab slices, red onion, and fresh cilantro on crisp crust.</p>
+      <!-- Item 3 -->
+      <div class="menu-item" data-category="fried">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/fried_momos.png" alt="Veg Fried Momos">
         </div>
+        <div class="menu-item-header">
+          <h3>Veg Fried Momos</h3>
+          <span class="menu-item-price">₹60</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of deep-fried, crunchy veg momos cooked to a crisp golden brown. Served with garlic mayonnaise and spicy red sauce.</p>
       </div>
+      
+      <!-- Item 4 -->
+      <div class="menu-item" data-category="fried">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/fried_momos.png" alt="Chicken Fried Momos">
+        </div>
+        <div class="menu-item-header">
+          <h3>Chicken Fried Momos</h3>
+          <span class="menu-item-price">₹80</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of crispy chicken momos deep-fried for a satisfying crunch while remaining juicy inside. Served with dipping sauces.</p>
+      </div>
+      
+      <!-- Item 5 -->
+      <div class="menu-item" data-category="special">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/schezwan_momos.png" alt="Schezwan Pan-Fried Momos">
+        </div>
+        <div class="menu-item-header">
+          <h3>Schezwan Pan-Fried Momos</h3>
+          <span class="menu-item-price">₹85</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of fried momos tossed in a fiery, glossy red Schezwan sauce with bell peppers, green onions, and chili seeds.</p>
+      </div>
+      
+      <!-- Item 6 -->
+      <div class="menu-item" data-category="special">
+        <div class="menu-item-image-wrapper">
+          <img src="assets/tandoori_momos.png" alt="Smoky Tandoori Momos">
+        </div>
+        <div class="menu-item-header">
+          <h3>Chicken Tandoori Momos</h3>
+          <span class="menu-item-price">₹110</span>
+        </div>
+        <p class="menu-item-desc">6 pieces of skewered momos coated in rich tandoori yogurt marinade, chargrilled for a smoky aroma. Served with green chutney.</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- Item 4 (Starter) -->
-      <div class="menu-item" data-category="starters">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Chicken Reshmi Kebab</h4>
-            <span class="menu-price">₹220</span>
-          </div>
-          <p>Tender chicken breast pieces marinated in cream, cashew paste, yogurt, and charcoal grilled to perfection.</p>
+  <!-- MOMO SPECIALTIES CAROUSEL -->
+  <section class="specialties-section">
+    <div class="section-header">
+      <span class="section-subtitle">Chef's Selection</span>
+      <h2 class="section-title">Specialty Bowls</h2>
+    </div>
+    
+    <div class="specialties-row">
+      <!-- Card 1 -->
+      <div class="specialty-card">
+        <img src="assets/momo_soup.png" alt="Momo Soup Thukpa" class="specialty-img">
+        <div class="specialty-info">
+          <h4>Steaming Momo Soup</h4>
+          <p>Comforting clear chicken or veg broth loaded with scallions, carrots, mushrooms, and 3 floating momos. A warm hug in a bowl!</p>
+          <span class="price-tag">₹60</span>
         </div>
       </div>
       
-      <!-- Item 5 (Starter) -->
-      <div class="menu-item" data-category="starters">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Drums of Heaven</h4>
-            <span class="menu-price">₹240</span>
-          </div>
-          <p>Crispy chicken lollipops tossed in a sweet, sour, and spicy honey-chilli glaze with sesame sprinkles.</p>
-        </div>
-      </div>
-      
-      <!-- Item 6 (Starter) -->
-      <div class="menu-item" data-category="starters">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Gondhoraj Lime Chicken Wrap</h4>
-            <span class="menu-price">₹160</span>
-          </div>
-          <p>Juicy chicken malai kebab strips, fresh greens, red onions, wrapped in a warm flatbread with Gondhoraj lime cream.</p>
-        </div>
-      </div>
-
-      <!-- Item 7 (Drink) -->
-      <div class="menu-item" data-category="drinks">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Gondhoraj Chilli Punch</h4>
-            <span class="menu-price">₹110</span>
-          </div>
-          <p>Fragrant Bengal Gondhoraj lime juice blended with soda, fresh mint leaves, crushed ice, and a pinch of green chilli zest.</p>
-        </div>
-      </div>
-      
-      <!-- Item 8 (Drink) -->
-      <div class="menu-item" data-category="drinks">
-        <div class="menu-item-info">
-          <div class="menu-item-header">
-            <h4>Belgian Chocolate Shake</h4>
-            <span class="menu-price">₹140</span>
-          </div>
-          <p>Thick, rich chocolate shake served in a chilled jar glass, drizzled with deep dark chocolate syrup.</p>
+      <!-- Card 2 -->
+      <div class="specialty-card highlighted">
+        <img src="assets/schezwan_momos.png" alt="Gravy Cheese Momos" class="specialty-img">
+        <div class="specialty-info">
+          <h4>Cheese Gravy Momos</h4>
+          <p>Fried momos submerged in a creamy, spicy hot cheese gravy sauce, finished with fresh coriander and grated cheese.</p>
+          <span class="price-tag">₹99</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6 — Wavy Gallery Section -->
+  <!-- PHOTO GALLERY -->
   <section id="gallery" class="gallery-section">
     <div class="section-header">
-      <span class="section-subtitle">Vibe Check</span>
-      <h2 class="section-title">Taste the Vibes Through Our Gallery</h2>
+      <span class="section-subtitle">Moments & Plates</span>
+      <h2 class="section-title">Handmade with Love</h2>
     </div>
     
-    <div class="wavy-gallery-wrapper">
-      <div class="polaroid-card" style="--rotation: -3deg;" onclick="openLightbox('assets/pizza_signature.jpg')">
-        <img src="assets/pizza_signature.jpg" alt="Signature Pizza close up">
-        <div class="caption">Signature Thin Crust</div>
+    <div class="gallery-grid">
+      <!-- Photo 1 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/steamed_momos.png')">
+        <img src="assets/steamed_momos.png" alt="Steamed Momos">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
-      
-      <div class="polaroid-card" style="--rotation: 4deg;" onclick="openLightbox('assets/chicken_lollipops.jpg')">
-        <img src="assets/chicken_lollipops.jpg" alt="Crispy Chicken Lollipops">
-        <div class="caption">Crispy Drums of Heaven</div>
+      <!-- Photo 2 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/fried_momos.png')">
+        <img src="assets/fried_momos.png" alt="Crispy Fried Momos">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
-      
-      <div class="polaroid-card" style="--rotation: -2deg;" onclick="openLightbox('assets/red_mocktail.jpg')">
-        <img src="assets/red_mocktail.jpg" alt="Zesty Red Mocktail">
-        <div class="caption">Fresh Berries Mocktail</div>
+      <!-- Photo 3 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/schezwan_momos.png')">
+        <img src="assets/schezwan_momos.png" alt="Schezwan Tossed Momos">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
-      
-      <div class="polaroid-card" style="--rotation: 3deg;" onclick="openLightbox('assets/pizza_skillet.jpg')">
-        <img src="assets/pizza_skillet.jpg" alt="Skillet Hot Pizza">
-        <div class="caption">Fresh From Oven</div>
+      <!-- Photo 4 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/tandoori_momos.png')">
+        <img src="assets/tandoori_momos.png" alt="Tandoori Platters">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
-      
-      <div class="polaroid-card" style="--rotation: -4deg;" onclick="openLightbox('assets/shake_bottle.jpg')">
-        <img src="assets/shake_bottle.jpg" alt="Chocolate Shake Jar">
-        <div class="caption">Rich Chocolate Shake</div>
+      <!-- Photo 5 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/momo_soup.png')">
+        <img src="assets/momo_soup.png" alt="Warm Comfort Soup">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
-
-      <div class="polaroid-card" style="--rotation: 2deg;" onclick="openLightbox('assets/kebab_flower.jpg')">
-        <img src="assets/kebab_flower.jpg" alt="Artisanal Kebabs Platter">
-        <div class="caption">Artisanal Kebab Platter</div>
-      </div>
-
-      <div class="polaroid-card" style="--rotation: -3deg;" onclick="openLightbox('assets/interior_shelf.jpg')">
-        <img src="assets/interior_shelf.jpg" alt="Curated Antiques & Vases">
-        <div class="caption">Curated Antiques & Vases</div>
-      </div>
-
-      <div class="polaroid-card" style="--rotation: 4deg;" onclick="openLightbox('assets/interior_counter.jpg')">
-        <img src="assets/interior_counter.jpg" alt="Espresso & Dining Bar">
-        <div class="caption">Espresso & Dining Bar</div>
-      </div>
-
-      <div class="polaroid-card" style="--rotation: -2deg;" onclick="openLightbox('assets/interior_fireplace_detail.jpg')">
-        <img src="assets/interior_fireplace_detail.jpg" alt="Cozy Fireplace Detail">
-        <div class="caption">Cozy Fireplace Detail</div>
+      <!-- Photo 6 -->
+      <div class="gallery-photo-card" onclick="openLightbox('assets/logo.png')">
+        <img src="assets/logo.png" alt="Mom's Kitchen Brand">
+        <div class="photo-overlay">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7 — Memory Wall -->
-  <section id="memories" class="memories-section">
+  <!-- LIGHTBOX CONTAINER -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <img id="lightboxImg" src="" alt="Zoomed view">
+  </div>
+
+  <!-- REVIEWS SECTION -->
+  <section id="reviews" class="reviews-section">
     <div class="section-header">
-      <span class="section-subtitle">Memory Wall</span>
-      <h2 class="section-title">Unforgettable Guest Moments</h2>
+      <span class="section-subtitle">Guest Feedback</span>
+      <h2 class="section-title">What Our Guests Say</h2>
     </div>
     
-    <div class="memories-grid">
-      <div class="memory-card" onclick="openLightbox('assets/bengali_thali.jpg')">
-        <img src="assets/bengali_thali.jpg" alt="Thali Feast Celebration">
-        <div class="memory-overlay">
-          <h4>Family Feast Celebration</h4>
-          <p>Gatherings filled with smiles, laughter, and heavy tables.</p>
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="reviewer-name">Bindia Mondal</span>
+          <span class="reviewer-sub">2 reviews • 2 photos</span>
+        </div>
+        <p class="review-body">"Tried the aloo paratha and soya keema paratha today and honestly both were so delicious 😍 The stuffing was super generous, full of flavour, and the parathas were huge in size!"</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
       </div>
       
-      <div class="memory-card" onclick="openLightbox('assets/catering_layout.jpg')">
-        <img src="assets/catering_layout.jpg" alt="Delightful catering dishes">
-        <div class="memory-overlay">
-          <h4>Multi-Cuisine Buffet Layouts</h4>
-          <p>Delighting guests with customized birthday and event spreads.</p>
+      <!-- Review 2 (Highlighted) -->
+      <div class="review-card highlighted">
+        <div class="review-meta">
+          <span class="reviewer-name">Avik Dutta</span>
+          <span class="reviewer-sub">1 review</span>
+        </div>
+        <p class="review-body">"The food is very tasty and home-like. The owner makes all dishes in front of you in one of the cleanest setup that I have seen. Whenever there is no food at home, I usually come and parcel roti or parathas."</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
       </div>
       
-      <div class="memory-card" onclick="openLightbox('assets/themed_interior.jpg')">
-        <img src="assets/themed_interior.jpg" alt="Cosy seating arrangements">
-        <div class="memory-overlay">
-          <h4>Weekend Hangout Spot</h4>
-          <p>A cosy hub for friends sharing slices and stories.</p>
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-meta">
+          <span class="reviewer-name">Lipsa Sahu</span>
+          <span class="reviewer-sub">2 reviews • 4 photos</span>
+        </div>
+        <p class="review-body">"Really great food at reasonable price in hygienic way❤️ It justifies its name 'mom's kitchen', the taste of mom's hand. Good behavior of the owner 😊"</p>
+        <div class="review-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7.5 — Share Your Experience (Reputation Management Popup Modal) -->
+  <!-- LOCATION & VISIT US SECTION -->
+  <section id="location" class="location-section">
+    <div class="location-grid">
+      <div class="location-info-column">
+        <span class="section-subtitle">Find Us</span>
+        <h2 class="section-title">Visit Mom's Kitchen</h2>
+        <p class="location-text">Come and enjoy steaming hot momos, cooked in a clean open kitchen directly under the owner's supervision.</p>
+        
+        <div class="info-lines">
+          <div class="info-line">
+            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+            <span>House No- 1/21, Dr. Ashish, Life Line Ln, near Sri Aurobindo Stadium, Rabindra Nagar, Midnapore, West Bengal 721101</span>
+          </div>
+          <div class="info-line">
+            <div class="info-icon"><i class="fas fa-phone"></i></div>
+            <a href="tel:08250569116">082505 69116</a>
+          </div>
+          <div class="info-line">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <span>Everyday: 11:00 AM – 10:00 PM</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="location-map-column">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.084196160456!2d87.30827101188338!3d22.42186437970929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d5be5cc55e1dd%3A0x93e31162ab3c5cc4!2sMom&#39;s%20Kitchen!5e0!3m2!1sen!2sin!4v1782648000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER & INQUIRY FORM -->
+  <section id="order" class="order-section">
+    <div class="order-box">
+      <div class="section-header">
+        <span class="section-subtitle">Craving Momos?</span>
+        <h2 class="section-title">Send Us Your Order/Inquiry</h2>
+      </div>
+      
+      <form class="order-form" id="whatsappOrderForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="orderName">Your Name *</label>
+            <input type="text" id="orderName" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label for="orderPhone">Phone Number *</label>
+            <input type="tel" id="orderPhone" required placeholder="Enter mobile number">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="orderDetails">What would you like to order? *</label>
+          <textarea id="orderDetails" rows="4" required placeholder="List your momo items, quantities, and specify Veg or Chicken (e.g. 2 Plates Chicken Fried Momos, 1 Veg Steamed)"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="orderType">Order Type *</label>
+          <select id="orderType" required>
+            <option value="Dine-in">Dine-in (Prepare table)</option>
+            <option value="Takeaway">Takeaway / Parcel</option>
+            <option value="Catering Inquiry">Catering / Party Order Inquiry</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="orderNotes">Special Instructions (Optional)</label>
+          <input type="text" id="orderNotes" placeholder="e.g. Extra spicy red chutney, packing details, etc.">
+        </div>
+        
+        <button type="submit" class="btn-primary w-full">Send Order via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="logo-wrapper">
+          <a href="#" class="logo-brand">
+            <img src="assets/logo.png" alt="Mom's Kitchen Footer Logo" class="footer-logo-img">
+            <div class="logo-text-group">
+              <span class="logo-main-text">Mom's Kitchen</span>
+              <span class="logo-sub-text">মা'এস কিচেন</span>
+            </div>
+          </a>
+        </div>
+        <p class="footer-brand-desc">Hygienic and tasty home-style momos prepared fresh in Rabindra Nagar, Midnapore. Just like mom makes it.</p>
+      </div>
+      
+      <div class="footer-links-col">
+        <h4>Explore</h4>
+        <a href="#about">About Us</a>
+        <a href="#features">Why Us</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      
+      <div class="footer-contact-col">
+        <h4>Mom's Kitchen</h4>
+        <p>House No- 1/21, Dr. Ashish, Life Line Ln, near Sri Aurobindo Stadium, Midnapore, West Bengal 721101</p>
+        <p class="footer-phone"><i class="fas fa-phone"></i> 082505 69116</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mom's Kitchen. All rights reserved. Made with love for Midnapore.</p>
+    </div>
+  </footer>
+
+  <!-- REPUTATION POPUP SYSTEM OVERLAYS -->
+
+  <!-- Rating Popup Modal -->
   <div class="modal-overlay" id="ratingModal" style="display: none;">
     <div class="modal-card rating-modal-card">
       <button class="modal-close-btn" id="closeRatingModal" aria-label="Close Rating Modal">&times;</button>
       
-      <div class="feedback-box" style="border: none; padding: 0; box-shadow: none;">
-        <div class="section-header" style="margin-bottom: 30px;">
+      <div class="feedback-box" style="border: none; padding: 0; box-shadow: none; background: none;">
+        <div class="section-header" style="margin-bottom: 24px;">
           <span class="section-subtitle">Share Your Experience</span>
           <h2 class="section-title" style="font-size: 2rem;">Your feedback helps us improve and serve you better.</h2>
         </div>
         
         <div class="rating-interactive-container" id="ratingInteractive">
-          <p class="rating-prompt">Rate your experience to get a discount code & a chance to win a free pizza!</p>
+          <p class="rating-prompt">Rate your dining experience to unlock a discount & a chance to win a free momo platter!</p>
           <div class="interactive-stars" id="interactiveStars">
             <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
             <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
@@ -439,7 +548,7 @@
         <!-- Positive Feedback Success Message -->
         <div class="positive-success-message" id="positiveSuccess" style="display: none;">
           <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-          <p class="success-txt">Thank you for your wonderful feedback! We have opened Google Reviews in a new tab so you can share your experience, claim your discount, and enter to win a free pizza.</p>
+          <p class="success-txt">Thank you for your wonderful feedback! We have opened Google Reviews in a new tab so you can share your experience, claim your discount, and enter to win free momos.</p>
           <a href="#" id="googleReviewBtn" class="btn-primary" target="_blank">Leave a Google Review</a>
         </div>
       </div>
@@ -451,7 +560,7 @@
     <div class="modal-card">
       <button class="modal-close-btn" id="closeFeedbackModal" aria-label="Close Modal">&times;</button>
       <h3>We value your feedback</h3>
-      <p>Please let us know how we can improve. Your input will be sent directly to our management team.</p>
+      <p>Please let us know how we can improve. Your input will be sent directly to the owner.</p>
       
       <form class="feedback-modal-form" id="negativeFeedbackForm">
         <div class="form-row-modal">
@@ -485,216 +594,7 @@
     </div>
   </div>
 
-  <!-- SECTION 8 — Customer Reviews -->
-  <section id="reviews" class="reviews-section">
-    <div class="section-header">
-      <span class="section-subtitle">Guest Feedbacks</span>
-      <h2 class="section-title">What Our Diners Say</h2>
-    </div>
-    
-    <div class="reviews-grid">
-      <!-- Review 1 -->
-      <div class="review-card">
-        <div class="review-meta">
-          <span class="reviewer-name">Amit Sengupta</span>
-          <span class="reviewer-sub">Local Guide • Keranitola</span>
-        </div>
-        <p class="review-body">"Bong Pizza is my absolute favorite place in Medinipur for fusion food. The Chicken Kosha Pizza has the perfect kick of spicy spices mixed with melting cheese! Truly a touch of Bengal."</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-      </div>
-      
-      <!-- Review 2 (Highlighted) -->
-      <div class="review-card highlighted">
-        <div class="review-meta">
-          <span class="reviewer-name">Debolina Das</span>
-          <span class="reviewer-sub">Customer Review • Midnapore Station Rd</span>
-        </div>
-        <p class="review-body">"I was amazed by their beautiful cozy interior design, but the food blew me away. The Gondhoraj Mocktail is extremely refreshing. Very friendly staff and great service."</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-      </div>
-      
-      <!-- Review 3 -->
-      <div class="review-card">
-        <div class="review-meta">
-          <span class="reviewer-name">Rahul Banerjee</span>
-          <span class="reviewer-sub">Food Blogger • Midnapore</span>
-        </div>
-        <p class="review-body">"Exceptional quality hand-stretched dough. The Tandoori Burst Pizza is well spiced. Highly recommend ordering bulk platters for birthdays. Definitely worth checking out!"</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 9 — About Us -->
-  <section id="about" class="about-section">
-    <div class="about-grid">
-      <div class="about-image-column">
-        <img src="assets/themed_interior.jpg" alt="Our Themed Cozy Interior Area" class="about-main-img">
-        <img src="assets/interior_fireplace.jpg" alt="Cozy decor element panel" class="about-sub-img">
-      </div>
-      
-      <div class="about-content-column">
-        <span class="badge-pill">Our Journey</span>
-        <h2>Where Italian Crafts Meet Bengali Soul</h2>
-        <p class="about-lead">Founded in the historic town of Medinipur, Bong Pizza was born from a simple realization: food is a language of connection.</p>
-        <p>We set out to create a cozy dining space that celebrates our roots. Every slice of pizza we serve blends premium Italian techniques—like proofing dough over hours—with traditional, intensely spiced curries, kebabs, and citrus notes beloved across Bengal.</p>
-        <p>From cozy dinners for couples to large birthday buffets, our space near Midnapore Railway Station road is designed to build memories, one delightful bite at a time.</p>
-        
-        <div class="about-stats">
-          <div class="stat-box">
-            <span class="stat-number">5+</span>
-            <span class="stat-lbl">Years Serving</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">20K+</span>
-            <span class="stat-lbl">Happy Diners</span>
-          </div>
-          <div class="stat-box">
-            <span class="stat-number">15+</span>
-            <span class="stat-lbl">Signature Recipes</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10 — Location & Business Hours -->
-  <section class="location-section">
-    <div class="location-grid">
-      <div class="location-info-card">
-        <span class="badge-pill">Find Us</span>
-        <h2>Visit Bong Pizza</h2>
-        
-        <div class="info-block">
-          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="info-text">
-            <h4>Address</h4>
-            <p>Ward No. 5, Holding No. 287/A, Midnapore Railway Station Rd, near Rangamati, Bidhan Nagar East, Medinipur, West Bengal 721101</p>
-          </div>
-        </div>
-        
-        <div class="info-block">
-          <div class="info-icon"><i class="fas fa-clock"></i></div>
-          <div class="info-text">
-            <h4>Operating Hours</h4>
-            <p>Everyday: 11:00 AM – 11:30 PM</p>
-          </div>
-        </div>
-        
-        <div class="info-block">
-          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
-          <div class="info-text">
-            <h4>Contact Numbers</h4>
-            <p>+91 98765 43210 / +91 87654 32109</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="map-wrapper">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.084196160456!2d87.30827101188338!3d22.42186437970929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d4187212457fb%3A0xe54e60741270c5eb!2sBong%20Pizza%20Medinipur!5e0!3m2!1sen!2sin!4v1782369800000!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 11 — Reservation & Quick Action -->
-  <section id="contact" class="reservation-section">
-    <div class="reservation-box">
-      <div class="res-heading">
-        <span class="badge-pill">Reserve Space</span>
-        <h2>Secure Your Spot Today</h2>
-        <p>Avoid long queues during peak evening hours. Book a cozy table instantly for your family or friends.</p>
-      </div>
-      
-      <form class="reservation-form" onsubmit="event.preventDefault(); alert('Reservation requested! We will call you shortly to confirm.');">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Phone Number" required>
-        </div>
-        
-        <div class="form-row">
-          <input type="number" placeholder="Guests count" min="1" required>
-          <input type="datetime-local" required>
-        </div>
-        
-        <button type="submit" class="btn-primary w-full">Request Table Booking</button>
-      </form>
-      
-      <div class="quick-contact-actions">
-        <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20reserve%20a%20table%20at%20Bong%20Pizza%20Medinipur." class="btn-outline wa-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-        </a>
-        <a href="tel:+919876543210" class="btn-outline call-btn">
-          <i class="fas fa-phone-alt"></i> Call Direct Support
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 12 — Premium Footer -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand-col">
-        <div class="footer-logo-img-wrapper">
-          <img src="assets/logo.jpg" alt="Bong Pizza Logo" class="footer-brand-logo-image">
-        </div>
-        <p class="footer-tag">A Touch of Bengal, A Slice of Italy. Serving handcrafted memories in Midnapore since 2021.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      
-      <div class="footer-links-col">
-        <h4>Explore</h4>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#menu">Complete Menu</a>
-          <a href="#gallery">Vibe Gallery</a>
-          <a href="#reviews">Dinners Reviews</a>
-        </div>
-      </div>
-      
-      <div class="footer-subscribe-col">
-        <h4>Stay Updated</h4>
-        <p>Subscribe to receive festive discounts, holiday hours, and new signature pizza alerts.</p>
-        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-          <input type="email" placeholder="Your Email Address" required>
-          <button type="submit" aria-label="Submit Email"><i class="fas fa-paper-plane"></i></button>
-        </form>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 Bong Pizza Medinipur. All rights reserved. Developed to premium agency specifications.</p>
-      <div class="footer-policy-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Lightbox Popup Container -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightboxImg" src="" alt="Lightbox Zoom View">
-  </div>
-
+  <!-- Script Files -->
   <script src="index.js"></script>
 </body>
 </html>
