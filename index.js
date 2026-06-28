@@ -1,7 +1,7 @@
 // INTERACTIVE CONTROLS FOR BONG PIZZA WEBSITE
 
 // CONFIGURATION FOR GOOGLE REVIEWS & REPUTATION MANAGEMENT
-const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJJ1ckIYeBHTsRy8VwEnRgTuU";
+const GOOGLE_REVIEW_URL = "https://www.google.co.in/maps/place/Bong+Pizza+Medinipur/@22.4218644,87.3078848,17z/data=!4m8!3m7!1s0x3a1d5be5cc55e1dd:0x93e31162ab3c5cc4!8m2!3d22.4218644!4d87.3104597!9m1!1b1!16s%2Fg%2F11ml2jpyd1?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D";
 const OWNER_WHATSAPP_NUMBER = "919876543210"; // Configurable owner WhatsApp
 const SAVE_TO_EXTERNAL_API = false;          // Optional storage config
 const EXTERNAL_API_URL = "https://api.yourdomain.com/feedback";
@@ -188,9 +188,23 @@ function initReputationManagement() {
       selectedRating = parseInt(star.getAttribute('data-value'));
       highlightStars(selectedRating);
       
-      // Update label text and button status
+      // Update label text
       ratingLabel.textContent = `You selected: ${selectedRating} Star${selectedRating > 1 ? 's' : ''}`;
-      submitBtn.disabled = false;
+      
+      if (selectedRating >= 4) {
+        // Direct redirect for 4-5 stars (no submit button shown)
+        submitBtn.style.display = 'none';
+        ratingInteractive.style.display = 'none';
+        positiveSuccess.style.display = 'flex';
+        googleReviewBtn.href = GOOGLE_REVIEW_URL;
+        
+        // Open Google review URL immediately
+        window.open(GOOGLE_REVIEW_URL, '_blank');
+      } else {
+        // Show submit button only for negative reviews (< 4 stars)
+        submitBtn.style.display = 'inline-flex';
+        submitBtn.textContent = 'Submit Feedback';
+      }
     });
   });
 
@@ -209,12 +223,7 @@ function initReputationManagement() {
 
   // Handle Review Submission
   submitBtn.addEventListener('click', () => {
-    if (selectedRating >= 4) {
-      // 4 or 5 stars flow: Google Redirect
-      ratingInteractive.style.display = 'none';
-      positiveSuccess.style.display = 'flex';
-      googleReviewBtn.href = GOOGLE_REVIEW_URL;
-    } else {
+    if (selectedRating < 4 && selectedRating > 0) {
       // 1, 2, or 3 stars flow: Modal feedback Form
       feedbackModal.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Lock background scroll
@@ -283,7 +292,7 @@ function initReputationManagement() {
       selectedRating = 0;
       highlightStars(0);
       ratingLabel.textContent = 'Tap a star to rate';
-      submitBtn.disabled = true;
+      submitBtn.style.display = 'none';
 
       alert('Thank you for your feedback! We will get in touch with you shortly.');
     });
