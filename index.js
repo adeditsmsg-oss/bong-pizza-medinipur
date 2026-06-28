@@ -1,129 +1,100 @@
-// INTERACTIVE CONTROLS FOR MOM'S KITCHEN WEBSITE
+// BESPOKE JS INTERACTIONS FOR MOM'S KITCHEN
 
-// CONFIGURATION FOR GOOGLE REVIEWS & REPUTATION MANAGEMENT
 const GOOGLE_REVIEW_URL = "https://reviewflowai.in/index.php?route=review/ChIJqS7gNgBbHToRzB52JkJE4Ug";
 const OWNER_WHATSAPP_NUMBER = "918250569116"; // Mom's Kitchen WhatsApp
-const SAVE_TO_EXTERNAL_API = false;          // Optional storage config
+const SAVE_TO_EXTERNAL_API = false;
 const EXTERNAL_API_URL = "https://api.yourdomain.com/feedback";
 
 document.addEventListener('DOMContentLoaded', () => {
   initStickyNavbar();
   initMobileMenu();
   initScrollReveal();
+  initLightbox();
+  initTestimonialSlider();
   initReputationManagement();
-  initOrderForm();
+  initPreorderForm();
 });
 
 // 1. Sticky Navigation on Scroll
 function initStickyNavbar() {
-  const navbarContainer = document.querySelector('.navbar-container');
-  if (!navbarContainer) return;
+  const headerNav = document.querySelector('.header-nav');
+  if (!headerNav) return;
   
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      navbarContainer.classList.add('scrolled');
+      headerNav.classList.add('scrolled');
     } else {
-      navbarContainer.classList.remove('scrolled');
+      headerNav.classList.remove('scrolled');
     }
   });
 }
 
 // 2. Mobile Drawer Navigation
 function initMobileMenu() {
-  const menuToggle = document.getElementById('menuToggle');
+  const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
-  const drawerLinks = document.querySelectorAll('.drawer-link');
+  const drawerLinks = document.querySelectorAll('.drawer-item');
   
-  if (!menuToggle || !mobileDrawer) return;
+  if (!mobileToggle || !mobileDrawer) return;
 
-  menuToggle.addEventListener('click', (e) => {
+  mobileToggle.addEventListener('click', (e) => {
     e.stopPropagation();
     mobileDrawer.classList.toggle('open');
-    menuToggle.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
   });
 
   // Close drawer when clicking a link
   drawerLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileDrawer.classList.remove('open');
-      menuToggle.classList.remove('active');
+      mobileToggle.classList.remove('active');
     });
   });
 
   // Close drawer when clicking anywhere outside
   document.addEventListener('click', (e) => {
-    if (!mobileDrawer.contains(e.target) && !menuToggle.contains(e.target)) {
+    if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
       mobileDrawer.classList.remove('open');
-      menuToggle.classList.remove('active');
+      mobileToggle.classList.remove('active');
     }
   });
 }
 
-// 3. Menu Category Tab Filter
-window.filterMenu = function(category) {
-  // Update Active Tab Button styling
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(btn => {
-    if (btn.getAttribute('onclick').includes(category)) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
+// 3. Lightbox Zoom System
+function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  window.openLightbox = function(imageSrc) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Stop background scroll
+  };
+
+  window.closeLightbox = function() {
+    if (!lightbox) return;
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scroll
+  };
+
+  // Close lightbox on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
     }
   });
+}
 
-  // Filter Menu Items with a smooth fade effect
-  const menuItems = document.querySelectorAll('.menu-item');
-  menuItems.forEach(item => {
-    const itemCategory = item.getAttribute('data-category');
-    
-    if (category === 'all' || itemCategory === category) {
-      item.style.display = 'flex';
-      setTimeout(() => {
-        item.style.opacity = '1';
-        item.style.transform = 'translateY(0)';
-      }, 50);
-    } else {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(10px)';
-      setTimeout(() => {
-        item.style.display = 'none';
-      }, 300);
-    }
-  });
-};
-
-// 4. Lightbox Zoom Gallery System
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-
-window.openLightbox = function(imageSrc) {
-  if (!lightbox || !lightboxImg) return;
-  lightboxImg.src = imageSrc;
-  lightbox.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Stop background scroll
-};
-
-window.closeLightbox = function() {
-  if (!lightbox) return;
-  lightbox.style.display = 'none';
-  document.body.style.overflow = 'auto'; // Restore scroll
-};
-
-// Close lightbox on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeLightbox();
-  }
-});
-
-// 5. Staggered Scroll Reveal Animations
+// 4. Staggered Scroll Reveal Animations
 function initScrollReveal() {
   const revealElements = [
-    ...document.querySelectorAll('.feature-card'),
-    ...document.querySelectorAll('.menu-item'),
-    ...document.querySelectorAll('.review-card'),
-    ...document.querySelectorAll('.about-content-column'),
-    ...document.querySelectorAll('.location-grid')
+    ...document.querySelectorAll('.timeline-step'),
+    ...document.querySelectorAll('.menu-item-row'),
+    ...document.querySelectorAll('.masonry-item'),
+    ...document.querySelectorAll('.specialty-card-wrap'),
+    ...document.querySelectorAll('.visit-info-card'),
+    ...document.querySelectorAll('.visit-map-wrapper')
   ];
 
   // Set initial hidden styles
@@ -155,17 +126,61 @@ function initScrollReveal() {
   });
 }
 
-// 6. Google Review Reputation Management System (Timed Modal Popup)
+// 5. Custom Testimonial Slider
+function initTestimonialSlider() {
+  const cards = document.querySelectorAll('.slider-card');
+  const prevBtn = document.getElementById('prevReview');
+  const nextBtn = document.getElementById('nextReview');
+  
+  if (!cards.length) return;
+  
+  let currentIndex = 0;
+
+  function showReview(index) {
+    cards.forEach((card, i) => {
+      if (i === index) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showReview(currentIndex);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showReview(currentIndex);
+    });
+  }
+
+  // Auto slide every 8 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showReview(currentIndex);
+  }, 8000);
+}
+
+// 6. Google Review Reputation Management System (Timed Floating Widget)
 function initReputationManagement() {
   const stars = document.querySelectorAll('#interactiveStars .star-btn');
   const submitBtn = document.getElementById('submitRatingBtn');
   const ratingLabel = document.getElementById('ratingValueLabel');
-  const ratingInteractive = document.getElementById('ratingInteractive');
+  const widgetInteractive = document.getElementById('widgetInteractive');
   const positiveSuccess = document.getElementById('positiveSuccess');
   const googleReviewBtn = document.getElementById('googleReviewBtn');
   
-  const ratingModal = document.getElementById('ratingModal');
-  const closeRatingModal = document.getElementById('closeRatingModal');
+  const ratingWidget = document.getElementById('ratingWidget');
+  const ratingMiniTrigger = document.getElementById('ratingMiniTrigger');
+  const ratingExpandedCard = document.getElementById('ratingExpandedCard');
+  const closeRatingWidget = document.getElementById('closeRatingWidget');
+  
   const feedbackModal = document.getElementById('feedbackModal');
   const closeFeedbackModal = document.getElementById('closeFeedbackModal');
   const negativeFeedbackForm = document.getElementById('negativeFeedbackForm');
@@ -175,11 +190,11 @@ function initReputationManagement() {
 
   if (!stars.length || !submitBtn) return;
 
-  // Timer popup logic (always pops up every 10 seconds if not completed)
+  // Timer popup logic (always pops up every 10 seconds if closed/not completed)
   function showRatingPopup() {
-    if (ratingModal && ratingModal.style.display === 'none' && feedbackModal.style.display === 'none') {
-      ratingModal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+    if (ratingExpandedCard.style.display === 'none' && feedbackModal.style.display === 'none') {
+      ratingMiniTrigger.style.display = 'none';
+      ratingExpandedCard.style.display = 'block';
     }
   }
 
@@ -195,50 +210,48 @@ function initReputationManagement() {
     }
   }
 
-  // Initial trigger after 10 seconds and repeat interval
+  // Trigger initial popup after 10 seconds of page load
   setTimeout(showRatingPopup, 10000);
   startPopupTimer();
 
-  // Rating Modal Close logic (restarts popup cycle)
-  if (closeRatingModal && ratingModal) {
-    closeRatingModal.addEventListener('click', () => {
-      ratingModal.style.display = 'none';
-      document.body.style.overflow = 'auto';
+  // Click on Mini Trigger to open immediately
+  if (ratingMiniTrigger) {
+    ratingMiniTrigger.addEventListener('click', () => {
+      showRatingPopup();
+      stopPopupTimer(); // Pause automatic interval while active
     });
+  }
 
-    ratingModal.addEventListener('click', (e) => {
-      if (e.target === ratingModal) {
-        ratingModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
+  // Widget Close Logic (resumes interval loop)
+  if (closeRatingWidget) {
+    closeRatingWidget.addEventListener('click', () => {
+      ratingExpandedCard.style.display = 'none';
+      ratingMiniTrigger.style.display = 'flex';
+      startPopupTimer(); // Resume popup cycle in 10s
     });
   }
 
   // Star Ratings Interactive Logic
   stars.forEach(star => {
-    // Hover State
     star.addEventListener('mouseover', () => {
       const val = parseInt(star.getAttribute('data-value'));
       highlightStars(val);
     });
 
-    // Leave Hover State
     star.addEventListener('mouseout', () => {
       highlightStars(selectedRating);
     });
 
-    // Click Selection
     star.addEventListener('click', () => {
       selectedRating = parseInt(star.getAttribute('data-value'));
       highlightStars(selectedRating);
       
-      // Update label text
       ratingLabel.textContent = `You selected: ${selectedRating} Star${selectedRating > 1 ? 's' : ''}`;
       
       if (selectedRating >= 4) {
         // Direct redirect for 4-5 stars (no submit button shown)
         submitBtn.style.display = 'none';
-        ratingInteractive.style.display = 'none';
+        widgetInteractive.style.display = 'none';
         positiveSuccess.style.display = 'flex';
         googleReviewBtn.href = GOOGLE_REVIEW_URL;
         
@@ -271,8 +284,9 @@ function initReputationManagement() {
   // Handle Review Submission
   submitBtn.addEventListener('click', () => {
     if (selectedRating < 4 && selectedRating > 0) {
-      // Hide rating modal
-      if (ratingModal) ratingModal.style.display = 'none';
+      // Hide rating widget completely
+      ratingExpandedCard.style.display = 'none';
+      ratingMiniTrigger.style.display = 'none';
       
       // Stop popup timer
       stopPopupTimer();
@@ -288,13 +302,14 @@ function initReputationManagement() {
     closeFeedbackModal.addEventListener('click', () => {
       feedbackModal.style.display = 'none';
       document.body.style.overflow = 'auto'; // Restore scroll
+      ratingMiniTrigger.style.display = 'flex'; // Restore widget access
     });
 
-    // Close when clicking modal overlay backdrop
     feedbackModal.addEventListener('click', (e) => {
       if (e.target === feedbackModal) {
         feedbackModal.style.display = 'none';
         document.body.style.overflow = 'auto';
+        ratingMiniTrigger.style.display = 'flex';
       }
     });
   }
@@ -346,36 +361,37 @@ function initReputationManagement() {
       highlightStars(0);
       ratingLabel.textContent = 'Tap a star to rate';
       submitBtn.style.display = 'none';
+      ratingMiniTrigger.style.display = 'flex';
 
       alert('Thank you for your feedback! We will get in touch with you shortly.');
     });
   }
 }
 
-// 7. WhatsApp Order / Inquiry Form Submit Handler
-function initOrderForm() {
-  const orderForm = document.getElementById('whatsappOrderForm');
-  if (!orderForm) return;
+// 7. WhatsApp Preorder Form Submission Handler
+function initPreorderForm() {
+  const preorderForm = document.getElementById('whatsappPreorderForm');
+  if (!preorderForm) return;
 
-  orderForm.addEventListener('submit', (e) => {
+  preorderForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('orderName').value;
-    const phone = document.getElementById('orderPhone').value;
-    const details = document.getElementById('orderDetails').value;
-    const type = document.getElementById('orderType').value;
-    const notes = document.getElementById('orderNotes').value || 'None';
+    const name = document.getElementById('pName').value;
+    const phone = document.getElementById('pPhone').value;
+    const details = document.getElementById('pDetails').value;
+    const type = document.getElementById('pType').value;
+    const notes = document.getElementById('pNotes').value || 'None';
 
     // Compile WhatsApp preorder text
-    const rawMsg = `💬 New Momo Order / Inquiry - Mom's Kitchen\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📦 Order Type: ${type}\n\n🍽️ Order Details:\n${details}\n\n📝 Special Notes:\n${notes}`;
+    const rawMsg = `💬 New Momo Order / Inquiry - Mom's Kitchen\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📦 Service Type: ${type}\n\n🍽️ Order Details:\n${details}\n\n📝 Special Notes:\n${notes}`;
     const encodedMsg = encodeURIComponent(rawMsg);
     const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodedMsg}`;
 
     // Open WhatsApp Redirect
     window.open(waUrl, '_blank');
 
-    // Reset order form
-    orderForm.reset();
-    alert('Your order details have been compiled! We are redirecting you to WhatsApp to complete your order.');
+    // Reset preorder form
+    preorderForm.reset();
+    alert('Your order details have been compiled! Redirecting you to WhatsApp to complete your order.');
   });
 }

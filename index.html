@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mom's Kitchen — Best Momo Shop in Midnapore</title>
-  <meta name="description" content="Enjoy the best steamed, fried, Schezwan, and tandoori momos at Mom's Kitchen (মা'এস কিচেন), Rabindra Nagar, Midnapore. Homely, fresh, and 100% hygienic.">
+  <title>Mom's Kitchen — Best Momos in Midnapore</title>
+  <meta name="description" content="Savor the finest handcrafted, hygienic momos at Mom's Kitchen (মা'এস কিচেন), Rabindra Nagar, Midnapore. Cleanest open kitchen setups serving steamed, fried, Schezwan, and tandoori momos.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,34 +19,26 @@
 </head>
 <body>
 
-  <!-- NAVIGATION NAVBAR -->
-  <header class="navbar-container">
-    <div class="navbar-content">
-      <div class="logo-wrapper">
-        <a href="#" class="logo-brand">
-          <img src="assets/logo.png" alt="Mom's Kitchen Logo" class="logo-brand-img">
-          <div class="logo-text-group">
-            <span class="logo-main-text">Mom's Kitchen</span>
-            <span class="logo-sub-text">মা'এস কিচেন</span>
-          </div>
-        </a>
-      </div>
+  <!-- BESPOKE NAVBAR -->
+  <header class="header-nav">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <img src="assets/logo.png" alt="Mom's Kitchen Logo">
+        <div class="brand-text">
+          <h1>Mom's Kitchen</h1>
+          <span>মা'এস কিচেন</span>
+        </div>
+      </a>
       
-      <!-- Desktop Links -->
-      <nav class="nav-links-left">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#features" class="nav-link">Why Us</a>
-        <a href="#menu" class="nav-link">Our Menu</a>
-      </nav>
-      
-      <nav class="nav-links-right">
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#location" class="nav-link">Visit Us</a>
-        <a href="#order" class="btn-primary btn-nav">Order Now</a>
+      <nav class="main-navigation">
+        <a href="#story" class="nav-item">Our Story</a>
+        <a href="#menu" class="nav-item">Menu Card</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#visit" class="nav-item">Visit Us</a>
+        <a href="#preorder" class="btn-cta">Pre-Order</a>
       </nav>
 
-      <!-- Hamburger Menu toggle -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -54,297 +46,274 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <div class="drawer-header">
-      <span class="drawer-title">Navigation</span>
-    </div>
-    <nav class="drawer-nav">
-      <a href="#about" class="drawer-link">About</a>
-      <a href="#features" class="drawer-link">Why Us</a>
-      <a href="#menu" class="drawer-link">Our Menu</a>
-      <a href="#gallery" class="drawer-link">Gallery</a>
-      <a href="#location" class="drawer-link">Visit Us</a>
-      <a href="#order" class="btn-primary drawer-btn">Order Now</a>
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-navigation-drawer" id="mobileDrawer">
+    <nav class="drawer-links">
+      <a href="#story" class="drawer-item">Our Story</a>
+      <a href="#menu" class="drawer-item">Menu Card</a>
+      <a href="#gallery" class="drawer-item">Gallery</a>
+      <a href="#visit" class="drawer-item">Visit Us</a>
+      <a href="#preorder" class="btn-cta drawer-btn">Pre-Order Now</a>
     </nav>
   </div>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="hero">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <i class="fas fa-star text-gold"></i>
-        <span>4.8 Rating (31 Google Reviews)</span>
+  <!-- BESPOKE HERO SECTION -->
+  <section class="hero-block">
+    <div class="hero-block-inner">
+      <div class="hero-meta-badge">
+        <span class="star-rating"><i class="fas fa-star text-gold"></i> 4.8 Rating</span>
+        <span class="dot-separator">•</span>
+        <span>31 Google Reviews</span>
       </div>
-      <h1 class="hero-title">Steaming Hot, Handcrafted with Love</h1>
-      <p class="hero-subtitle">Experience the taste of mom's hands. The cleanest open kitchen serving steamed, fried, Schezwan, and tandoori momos in Midnapore.</p>
+      <h1 class="hero-main-title">Steamed with Love. Folded by Hand.</h1>
+      <p class="hero-lead-text">Experience the taste of mom's hands. Cleanest open kitchen serving steamed, fried, Schezwan, and tandoori momos in Midnapore.</p>
       
-      <div class="hero-actions">
-        <a href="#menu" class="btn-primary">View Menu</a>
-        <a href="#order" class="btn-secondary">Pre-Order Now</a>
-      </div>
-      
-      <div class="hero-business-info">
-        <div class="info-pill"><i class="fas fa-motorcycle"></i> Dine-in & Drive-through</div>
-        <div class="info-pill"><i class="fas fa-clock"></i> Open 11:00 AM - 10:00 PM</div>
+      <div class="hero-action-row">
+        <a href="#menu" class="btn-flat">Open Menu Card</a>
+        <a href="#preorder" class="btn-solid">Pre-Order via WhatsApp</a>
       </div>
     </div>
-    
-    <div class="hero-image-column">
-      <div class="hero-image-wrapper">
-        <img src="assets/steamed_momos.png" alt="Steamed Dumplings in Bamboo Steamer" class="hero-main-img">
-        <div class="floating-badge badge-top">
-          <i class="fas fa-award"></i>
-          <span>100% Hygienic</span>
+
+    <!-- Interactive Layered Collage -->
+    <div class="hero-collage-container">
+      <div class="collage-card card-one rotate-left">
+        <img src="assets/steamed_momos.png" alt="Fresh Steamed Momos">
+        <span>Bamboo Steamed Specials</span>
+      </div>
+      <div class="collage-card card-two rotate-right">
+        <img src="assets/tandoori_momos.png" alt="Charcoal Tandoori Momos">
+        <span>Smoky Tandoori Platters</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE RUNNING MARQUEE TICKER -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>100% HYGIENIC OPEN KITCHEN</span>
+      <span>•</span>
+      <span>FRESHLY FOLDED DAILY</span>
+      <span>•</span>
+      <span>SPICY GARLIC RED CHUTNEY</span>
+      <span>•</span>
+      <span>DINE-IN & DRIVE-THROUGH</span>
+      <span>•</span>
+      <span>ZERO ARTIFICIAL COLOURS</span>
+      <span>•</span>
+      <span>100% HYGIENIC OPEN KITCHEN</span>
+      <span>•</span>
+      <span>FRESHLY FOLDED DAILY</span>
+      <span>•</span>
+      <span>SPICY GARLIC RED CHUTNEY</span>
+      <span>•</span>
+      <span>DINE-IN & DRIVE-THROUGH</span>
+      <span>•</span>
+      <span>ZERO ARTIFICIAL COLOURS</span>
+    </div>
+  </div>
+
+  <!-- THE TIMELINE STORY SECTION -->
+  <section id="story" class="story-timeline-section">
+    <div class="story-header">
+      <span class="tagline">Our Process</span>
+      <h2>How We Craft Your Momos</h2>
+      <p>At Mom's Kitchen, the owner prepares all dishes in front of you in one of the cleanest setups you will find in Midnapore. Here is how we make it special.</p>
+    </div>
+
+    <div class="timeline-container">
+      <!-- Step 1 -->
+      <div class="timeline-step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Handmade Wheat Dough</h3>
+          <p>We knead the dough fresh multiple times a day using filtered water, with zero additives, bleaching agents, or preservatives.</p>
         </div>
-        <div class="floating-badge badge-bottom">
-          <i class="fas fa-fire"></i>
-          <span>Spicy Chili Chutney</span>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Fresh Minced Fillings</h3>
+          <p>We source local green cabbage, carrots, onions, paneer, and fresh chicken daily. Filled with clean proteins and spices.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Steamed in Traditional Bamboo</h3>
+          <p>Steaming in natural organic bamboo baskets gives the momos a delicate moisture and maintains hygienic standards.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-step">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Fresh Ground Chili Sauce</h3>
+          <p>Grinding dry red chilies, garlic, and vinegar daily to make our signature fiery chutney. Served alongside cooling mint mayo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about-section">
-    <div class="about-grid">
-      <div class="about-image-column">
-        <div class="polaroid-collage">
-          <div class="polaroid-photo rotate-left">
-            <img src="assets/logo.png" alt="Mom's Kitchen Setup">
-            <p>Our Clean Kitchen</p>
-          </div>
-          <div class="polaroid-photo rotate-right">
-            <img src="assets/tandoori_momos.png" alt="Chef Special Momos">
-            <p>Smoky Tandoori Momos</p>
-          </div>
+  <!-- EDITORIAL MENU CARD SECTION -->
+  <section id="menu" class="editorial-menu-section">
+    <div class="story-header">
+      <span class="tagline">Specials Selection</span>
+      <h2>Our Menu Card</h2>
+      <p>Simple, honest pricing. Homely taste at reasonable rates (₹1–200 per person).</p>
+    </div>
+
+    <div class="menu-card-wrapper">
+      <!-- Column 1: Steamed Dumplings -->
+      <div class="menu-column">
+        <div class="menu-column-header">
+          <h3><i class="fas fa-wind"></i> Steamed Selection</h3>
         </div>
-      </div>
-      
-      <div class="about-content-column">
-        <span class="section-subtitle">Our Story</span>
-        <h2 class="section-title">The Taste of Mom's Hand in Every Fold</h2>
-        <p class="about-text">At Mom's Kitchen, the owner crafts every dish right in front of you in one of the cleanest setups you will find in Midnapore. It justifies its name—homely, hygienic, and reasonable food that reminds you of home.</p>
         
-        <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-num">4.8</span>
-            <span class="stat-label">Google Rating</span>
+        <div class="menu-card-list">
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Veg Steamed Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹50</span>
+            </div>
+            <p class="item-details">Minced fresh cabbage, carrots, and sweet onions steamed. Served with spicy garlic chutney.</p>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Hygienic Setup</span>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Chicken Steamed Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹70</span>
+            </div>
+            <p class="item-details">Juicy minced chicken chest seasoned with light garlic and ginger wrapped in paper-thin dough.</p>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">₹1–200</span>
-            <span class="stat-label">Budget Friendly</span>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Paneer Steamed Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹65</span>
+            </div>
+            <p class="item-details">Soft shredded local paneer, coriander, and mild herbs stuffed in delicate wrappers.</p>
+          </div>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Comforting Momo Soup Bowl</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹60</span>
+            </div>
+            <p class="item-details">Comforting clear vegetable broth with scallions, carrot strips, and 3 floating hot steamed momos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Fried & Grilled Specials -->
+      <div class="menu-column">
+        <div class="menu-column-header">
+          <h3><i class="fas fa-fire"></i> Fried & Grilled Specials</h3>
+        </div>
+        
+        <div class="menu-card-list">
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Veg Fried Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹60</span>
+            </div>
+            <p class="item-details">Deep-fried golden crunchy dumplings served with creamy white mayonnaise.</p>
+          </div>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Chicken Fried Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹80</span>
+            </div>
+            <p class="item-details">Crispy battered chicken momos fried to golden texture. Juicy filling inside.</p>
+          </div>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Schezwan Pan-Fried Momos</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹85</span>
+            </div>
+            <p class="item-details">Dumplings pan-fried and tossed in a fiery, glossy red Schezwan sauce with peppers.</p>
+          </div>
+
+          <!-- Item -->
+          <div class="menu-item-row">
+            <div class="menu-item-main">
+              <span class="item-title">Chicken Tandoori Momos (6 Pcs)</span>
+              <span class="item-line"></span>
+              <span class="item-price">₹110</span>
+            </div>
+            <p class="item-details">Skewered momos roasted in clay-oven in tandoori marinade, served with mint dip.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES (WHY US) SECTION -->
-  <section id="features" class="features-section">
-    <div class="section-header">
-      <span class="section-subtitle">Why Choose Us</span>
-      <h2 class="section-title">Hygienic, Healthy & Homemade</h2>
-    </div>
-    
-    <div class="features-grid">
-      <!-- Feature 1 -->
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-        <h3>100% Open & Hygienic</h3>
-        <p>Watch your food being prepared fresh right in front of your eyes. Clean utensils, filtered water, and spotless countertops are our promise.</p>
+  <!-- ASYMMETRICAL SPECIALTIES SECTION -->
+  <section class="asymmetric-specialties">
+    <div class="specialty-card-wrap">
+      <div class="specialty-card-img">
+        <img src="assets/schezwan_momos.png" alt="Cheese Gravy Momos">
       </div>
-      
-      <!-- Feature 2 -->
-      <div class="feature-card highlighted">
-        <div class="feature-icon"><i class="fas fa-heart"></i></div>
-        <h3>Zero Artificial Colors</h3>
-        <p>We do not use artificial food colors, chemical preservatives, or excess MSG. Healthy, digestible momos cooked with motherly care.</p>
-      </div>
-      
-      <!-- Feature 3 -->
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-pepper-hot"></i></div>
-        <h3>Signature Hot Chutney</h3>
-        <p>Our red garlic chutney is ground fresh daily using premium spices. Perfectly fiery, accompanied by sweet mayonnaise and green mint yogurt.</p>
+      <div class="specialty-card-info">
+        <span class="card-badge">Chef's Signature</span>
+        <h3>Cheese Gravy Momo Bowls</h3>
+        <p>Crunchy fried dumplings drowned in a warm, rich cheesy gravy sauce finished with grated cheddar cheese, green chives, and cracked black pepper. Comfort food at its absolute best.</p>
+        <span class="card-price">₹99</span>
       </div>
     </div>
   </section>
 
-  <!-- MENU SECTION -->
-  <section id="menu" class="menu-section">
-    <div class="section-header">
-      <span class="section-subtitle">Specials Menu</span>
-      <h2 class="section-title">Explore Our Momo Selection</h2>
+  <!-- MASONRY GALLERY SECTION -->
+  <section id="gallery" class="masonry-gallery-section">
+    <div class="story-header">
+      <span class="tagline">Visual Tour</span>
+      <h2>Handmade with Love</h2>
     </div>
-    
-    <!-- Tab Controls -->
-    <div class="menu-tabs">
-      <button class="tab-btn active" onclick="filterMenu('all')">All Momos</button>
-      <button class="tab-btn" onclick="filterMenu('steamed')">Steamed</button>
-      <button class="tab-btn" onclick="filterMenu('fried')">Fried & Crispy</button>
-      <button class="tab-btn" onclick="filterMenu('special')">Pan-Fried & Tandoori</button>
-    </div>
-    
-    <!-- Menu Grid -->
-    <div class="menu-grid">
-      <!-- Item 1 -->
-      <div class="menu-item" data-category="steamed">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/steamed_momos.png" alt="Veg Steamed Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Veg Steamed Momos</h3>
-          <span class="menu-item-price">₹50</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of delicate dumplings packed with finely minced cabbage, carrots, onions, and garlic. Served with piping hot chili chutney.</p>
-      </div>
-      
-      <!-- Item 2 -->
-      <div class="menu-item" data-category="steamed">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/steamed_momos.png" alt="Chicken Steamed Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Chicken Steamed Momos</h3>
-          <span class="menu-item-price">₹70</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of juicy, tender minced chicken dumplings wrapped in thin dough and steamed to perfection. Served with signature spicy chutney.</p>
-      </div>
-      
-      <!-- Item 3 -->
-      <div class="menu-item" data-category="fried">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/fried_momos.png" alt="Veg Fried Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Veg Fried Momos</h3>
-          <span class="menu-item-price">₹60</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of deep-fried, crunchy veg momos cooked to a crisp golden brown. Served with garlic mayonnaise and spicy red sauce.</p>
-      </div>
-      
-      <!-- Item 4 -->
-      <div class="menu-item" data-category="fried">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/fried_momos.png" alt="Chicken Fried Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Chicken Fried Momos</h3>
-          <span class="menu-item-price">₹80</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of crispy chicken momos deep-fried for a satisfying crunch while remaining juicy inside. Served with dipping sauces.</p>
-      </div>
-      
-      <!-- Item 5 -->
-      <div class="menu-item" data-category="special">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/schezwan_momos.png" alt="Schezwan Pan-Fried Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Schezwan Pan-Fried Momos</h3>
-          <span class="menu-item-price">₹85</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of fried momos tossed in a fiery, glossy red Schezwan sauce with bell peppers, green onions, and chili seeds.</p>
-      </div>
-      
-      <!-- Item 6 -->
-      <div class="menu-item" data-category="special">
-        <div class="menu-item-image-wrapper">
-          <img src="assets/tandoori_momos.png" alt="Smoky Tandoori Momos">
-        </div>
-        <div class="menu-item-header">
-          <h3>Chicken Tandoori Momos</h3>
-          <span class="menu-item-price">₹110</span>
-        </div>
-        <p class="menu-item-desc">6 pieces of skewered momos coated in rich tandoori yogurt marinade, chargrilled for a smoky aroma. Served with green chutney.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- MOMO SPECIALTIES CAROUSEL -->
-  <section class="specialties-section">
-    <div class="section-header">
-      <span class="section-subtitle">Chef's Selection</span>
-      <h2 class="section-title">Specialty Bowls</h2>
-    </div>
-    
-    <div class="specialties-row">
-      <!-- Card 1 -->
-      <div class="specialty-card">
-        <img src="assets/momo_soup.png" alt="Momo Soup Thukpa" class="specialty-img">
-        <div class="specialty-info">
-          <h4>Steaming Momo Soup</h4>
-          <p>Comforting clear chicken or veg broth loaded with scallions, carrots, mushrooms, and 3 floating momos. A warm hug in a bowl!</p>
-          <span class="price-tag">₹60</span>
-        </div>
+    <div class="masonry-grid">
+      <div class="masonry-item height-tall" onclick="openLightbox('assets/steamed_momos.png')">
+        <img src="assets/steamed_momos.png" alt="Steamed Dumplings Basket">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
-      
-      <!-- Card 2 -->
-      <div class="specialty-card highlighted">
-        <img src="assets/schezwan_momos.png" alt="Gravy Cheese Momos" class="specialty-img">
-        <div class="specialty-info">
-          <h4>Cheese Gravy Momos</h4>
-          <p>Fried momos submerged in a creamy, spicy hot cheese gravy sauce, finished with fresh coriander and grated cheese.</p>
-          <span class="price-tag">₹99</span>
-        </div>
+      <div class="masonry-item" onclick="openLightbox('assets/fried_momos.png')">
+        <img src="assets/fried_momos.png" alt="Fried Crunchy Momos">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
-    </div>
-  </section>
-
-  <!-- PHOTO GALLERY -->
-  <section id="gallery" class="gallery-section">
-    <div class="section-header">
-      <span class="section-subtitle">Moments & Plates</span>
-      <h2 class="section-title">Handmade with Love</h2>
-    </div>
-    
-    <div class="gallery-grid">
-      <!-- Photo 1 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/steamed_momos.png')">
-        <img src="assets/steamed_momos.png" alt="Steamed Momos">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
+      <div class="masonry-item" onclick="openLightbox('assets/schezwan_momos.png')">
+        <img src="assets/schezwan_momos.png" alt="Pan Fried Schezwan Momos">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
-      <!-- Photo 2 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/fried_momos.png')">
-        <img src="assets/fried_momos.png" alt="Crispy Fried Momos">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
+      <div class="masonry-item height-tall" onclick="openLightbox('assets/tandoori_momos.png')">
+        <img src="assets/tandoori_momos.png" alt="Tandoori Chargrilled Platters">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
-      <!-- Photo 3 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/schezwan_momos.png')">
-        <img src="assets/schezwan_momos.png" alt="Schezwan Tossed Momos">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
+      <div class="masonry-item" onclick="openLightbox('assets/momo_soup.png')">
+        <img src="assets/momo_soup.png" alt="Warm Healthy Broth Soup">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
-      <!-- Photo 4 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/tandoori_momos.png')">
-        <img src="assets/tandoori_momos.png" alt="Tandoori Platters">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
-      </div>
-      <!-- Photo 5 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/momo_soup.png')">
-        <img src="assets/momo_soup.png" alt="Warm Comfort Soup">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
-      </div>
-      <!-- Photo 6 -->
-      <div class="gallery-photo-card" onclick="openLightbox('assets/logo.png')">
-        <img src="assets/logo.png" alt="Mom's Kitchen Brand">
-        <div class="photo-overlay">
-          <i class="fas fa-expand"></i>
-        </div>
+      <div class="masonry-item" onclick="openLightbox('assets/logo.png')">
+        <img src="assets/logo.png" alt="Logo Brand Mark">
+        <div class="masonry-overlay"><i class="fas fa-expand"></i></div>
       </div>
     </div>
   </section>
@@ -355,77 +324,76 @@
     <img id="lightboxImg" src="" alt="Zoomed view">
   </div>
 
-  <!-- REVIEWS SECTION -->
-  <section id="reviews" class="reviews-section">
-    <div class="section-header">
-      <span class="section-subtitle">Guest Feedback</span>
-      <h2 class="section-title">What Our Guests Say</h2>
+  <!-- CUSTOM INTERACTIVE TESTIMONIAL SLIDER -->
+  <section class="testimonial-slider-section">
+    <div class="story-header">
+      <span class="tagline">Guest Book</span>
+      <h2>Real Reviews from Visitors</h2>
     </div>
-    
-    <div class="reviews-grid">
-      <!-- Review 1 -->
-      <div class="review-card">
-        <div class="review-meta">
-          <span class="reviewer-name">Bindia Mondal</span>
-          <span class="reviewer-sub">2 reviews • 2 photos</span>
+
+    <div class="testimonial-slider-container">
+      <div class="slider-wrapper">
+        <!-- Review 1 -->
+        <div class="slider-card active">
+          <p class="review-text">"Tried the aloo paratha and soya keema paratha today and honestly both were so delicious 😍 The stuffing was super generous, full of flavour, and the parathas were huge in size!"</p>
+          <div class="reviewer-meta">
+            <span class="reviewer-name">Bindia Mondal</span>
+            <span class="reviewer-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+          </div>
         </div>
-        <p class="review-body">"Tried the aloo paratha and soya keema paratha today and honestly both were so delicious 😍 The stuffing was super generous, full of flavour, and the parathas were huge in size!"</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+        <!-- Review 2 -->
+        <div class="slider-card">
+          <p class="review-text">"The food is very tasty and home-like. The owner makes all dishes in front of you in one of the cleanest setup that I have seen. Whenever there is no food at home, I usually come and parcel roti or parathas."</p>
+          <div class="reviewer-meta">
+            <span class="reviewer-name">Avik Dutta</span>
+            <span class="reviewer-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="slider-card">
+          <p class="review-text">"Really great food at reasonable price in hygienic way❤️ It justifies its name 'mom's kitchen', the taste of mom's hand. Good behavior of the owner 😊"</p>
+          <div class="reviewer-meta">
+            <span class="reviewer-name">Lipsa Sahu</span>
+            <span class="reviewer-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+          </div>
         </div>
       </div>
-      
-      <!-- Review 2 (Highlighted) -->
-      <div class="review-card highlighted">
-        <div class="review-meta">
-          <span class="reviewer-name">Avik Dutta</span>
-          <span class="reviewer-sub">1 review</span>
-        </div>
-        <p class="review-body">"The food is very tasty and home-like. The owner makes all dishes in front of you in one of the cleanest setup that I have seen. Whenever there is no food at home, I usually come and parcel roti or parathas."</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-      </div>
-      
-      <!-- Review 3 -->
-      <div class="review-card">
-        <div class="review-meta">
-          <span class="reviewer-name">Lipsa Sahu</span>
-          <span class="reviewer-sub">2 reviews • 4 photos</span>
-        </div>
-        <p class="review-body">"Really great food at reasonable price in hygienic way❤️ It justifies its name 'mom's kitchen', the taste of mom's hand. Good behavior of the owner 😊"</p>
-        <div class="review-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
+
+      <!-- Controls -->
+      <div class="slider-controls">
+        <button class="slider-arrow" id="prevReview" aria-label="Previous Review"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow" id="nextReview" aria-label="Next Review"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
 
-  <!-- LOCATION & VISIT US SECTION -->
-  <section id="location" class="location-section">
-    <div class="location-grid">
-      <div class="location-info-column">
-        <span class="section-subtitle">Find Us</span>
-        <h2 class="section-title">Visit Mom's Kitchen</h2>
-        <p class="location-text">Come and enjoy steaming hot momos, cooked in a clean open kitchen directly under the owner's supervision.</p>
+  <!-- MAP & LOCATION SECTION -->
+  <section id="visit" class="visit-section">
+    <div class="visit-grid">
+      <div class="visit-info-card">
+        <span class="tagline">Visit Us</span>
+        <h2>Find Our Kitchen</h2>
+        <p>Come try steaming hot momos prepared fresh under the owner's personal supervision in Rabindra Nagar, Midnapore.</p>
         
-        <div class="info-lines">
-          <div class="info-line">
-            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+        <ul class="visit-details-list">
+          <li>
+            <i class="fas fa-map-location-dot"></i>
             <span>House No- 1/21, Dr. Ashish, Life Line Ln, near Sri Aurobindo Stadium, Rabindra Nagar, Midnapore, West Bengal 721101</span>
-          </div>
-          <div class="info-line">
-            <div class="info-icon"><i class="fas fa-phone"></i></div>
-            <a href="tel:08250569116">082505 69116</a>
-          </div>
-          <div class="info-line">
-            <div class="info-icon"><i class="fas fa-clock"></i></div>
-            <span>Everyday: 11:00 AM – 10:00 PM</span>
-          </div>
-        </div>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <span>Open Everyday: 11:00 AM – 10:00 PM</span>
+          </li>
+          <li>
+            <i class="fas fa-phone-volume"></i>
+            <a href="tel:08250569116" class="phone-link">082505 69116</a>
+          </li>
+        </ul>
       </div>
-      
-      <div class="location-map-column">
+
+      <div class="visit-map-wrapper">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.084196160456!2d87.30827101188338!3d22.42186437970929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d5be5cc55e1dd%3A0x93e31162ab3c5cc4!2sMom&#39;s%20Kitchen!5e0!3m2!1sen!2sin!4v1782648000000!5m2!1sen!2sin" 
           width="100%" 
@@ -439,123 +407,123 @@
     </div>
   </section>
 
-  <!-- ORDER & INQUIRY FORM -->
-  <section id="order" class="order-section">
-    <div class="order-box">
-      <div class="section-header">
-        <span class="section-subtitle">Craving Momos?</span>
-        <h2 class="section-title">Send Us Your Order/Inquiry</h2>
+  <!-- WHATSAPP PREORDER FORM -->
+  <section id="preorder" class="preorder-section">
+    <div class="preorder-card">
+      <div class="preorder-header">
+        <h2>Pre-Order / Catering Form</h2>
+        <p>Send your order details to us directly via WhatsApp to prepare your table or parcel.</p>
       </div>
-      
-      <form class="order-form" id="whatsappOrderForm">
+
+      <form id="whatsappPreorderForm" class="preorder-form">
         <div class="form-row">
-          <div class="form-group">
-            <label for="orderName">Your Name *</label>
-            <input type="text" id="orderName" required placeholder="Enter your full name">
+          <div class="form-input-group">
+            <label for="pName">Name *</label>
+            <input type="text" id="pName" required placeholder="Your name">
           </div>
-          <div class="form-group">
-            <label for="orderPhone">Phone Number *</label>
-            <input type="tel" id="orderPhone" required placeholder="Enter mobile number">
+          <div class="form-input-group">
+            <label for="pPhone">Phone Number *</label>
+            <input type="tel" id="pPhone" required placeholder="Mobile number">
           </div>
         </div>
-        
-        <div class="form-group">
-          <label for="orderDetails">What would you like to order? *</label>
-          <textarea id="orderDetails" rows="4" required placeholder="List your momo items, quantities, and specify Veg or Chicken (e.g. 2 Plates Chicken Fried Momos, 1 Veg Steamed)"></textarea>
+
+        <div class="form-input-group">
+          <label for="pDetails">Momo Order Details *</label>
+          <textarea id="pDetails" rows="4" required placeholder="Specify Veg/Chicken, Fried/Steamed/Tandoori and quantities (e.g. 2 Chicken Steam, 1 Veg Fried)"></textarea>
         </div>
-        
-        <div class="form-group">
-          <label for="orderType">Order Type *</label>
-          <select id="orderType" required>
-            <option value="Dine-in">Dine-in (Prepare table)</option>
-            <option value="Takeaway">Takeaway / Parcel</option>
-            <option value="Catering Inquiry">Catering / Party Order Inquiry</option>
-          </select>
+
+        <div class="form-row">
+          <div class="form-input-group">
+            <label for="pType">Service Type *</label>
+            <select id="pType" required>
+              <option value="Dine-in">Dine-in (Prepare table)</option>
+              <option value="Takeaway">Takeaway / Parcel</option>
+              <option value="Catering Inquiry">Catering Inquiry</option>
+            </select>
+          </div>
+          <div class="form-input-group">
+            <label for="pNotes">Special Notes (Optional)</label>
+            <input type="text" id="pNotes" placeholder="e.g. Extra hot red sauce, no onions">
+          </div>
         </div>
-        
-        <div class="form-group">
-          <label for="orderNotes">Special Instructions (Optional)</label>
-          <input type="text" id="orderNotes" placeholder="e.g. Extra spicy red chutney, packing details, etc.">
-        </div>
-        
-        <button type="submit" class="btn-primary w-full">Send Order via WhatsApp</button>
+
+        <button type="submit" class="btn-solid-submit">Send Order Details via WhatsApp</button>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand-col">
-        <div class="logo-wrapper">
-          <a href="#" class="logo-brand">
-            <img src="assets/logo.png" alt="Mom's Kitchen Footer Logo" class="footer-logo-img">
-            <div class="logo-text-group">
-              <span class="logo-main-text">Mom's Kitchen</span>
-              <span class="logo-sub-text">মা'এস কিচেন</span>
-            </div>
-          </a>
-        </div>
-        <p class="footer-brand-desc">Hygienic and tasty home-style momos prepared fresh in Rabindra Nagar, Midnapore. Just like mom makes it.</p>
+  <!-- BESPOKE FOOTER -->
+  <footer class="bespoke-footer">
+    <div class="footer-inner">
+      <div class="footer-column brand-col">
+        <a href="#" class="brand-logo">
+          <img src="assets/logo.png" alt="Footer Logo">
+          <div class="brand-text">
+            <h3>Mom's Kitchen</h3>
+            <span>মা'এস কিচেন</span>
+          </div>
+        </a>
+        <p>Savor the cleanest, home-cooked momos rolled and folded freshly in Rabindra Nagar, Midnapore.</p>
       </div>
-      
-      <div class="footer-links-col">
+
+      <div class="footer-column links-col">
         <h4>Explore</h4>
-        <a href="#about">About Us</a>
-        <a href="#features">Why Us</a>
-        <a href="#menu">Our Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu Card</a>
         <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit Us</a>
       </div>
-      
-      <div class="footer-contact-col">
+
+      <div class="footer-column address-col">
         <h4>Mom's Kitchen</h4>
-        <p>House No- 1/21, Dr. Ashish, Life Line Ln, near Sri Aurobindo Stadium, Midnapore, West Bengal 721101</p>
-        <p class="footer-phone"><i class="fas fa-phone"></i> 082505 69116</p>
+        <p>House No- 1/21, Dr. Ashish, Life Line Ln, near Sri Aurobindo Stadium, Rabindra Nagar, Midnapore, West Bengal 721101</p>
+        <span class="phone-display"><i class="fas fa-phone-alt"></i> 082505 69116</span>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 Mom's Kitchen. All rights reserved. Made with love for Midnapore.</p>
+
+    <div class="footer-copyright">
+      <p>&copy; 2026 Mom's Kitchen. All rights reserved. Handcrafted for Midnapore.</p>
     </div>
   </footer>
 
-  <!-- REPUTATION POPUP SYSTEM OVERLAYS -->
+  <!-- BESPOKE EXPANDABLE FLOATING RATING WIDGET (REPUTATION SYSTEM) -->
+  <div class="floating-rating-widget-container" id="ratingWidget">
+    <!-- Mini Trigger (Initially shown) -->
+    <div class="rating-mini-trigger" id="ratingMiniTrigger">
+      <div class="trigger-icon"><i class="fas fa-star text-gold"></i></div>
+      <span class="trigger-text">Rate & Win Pizza!</span>
+    </div>
 
-  <!-- Rating Popup Modal -->
-  <div class="modal-overlay" id="ratingModal" style="display: none;">
-    <div class="modal-card rating-modal-card">
-      <button class="modal-close-btn" id="closeRatingModal" aria-label="Close Rating Modal">&times;</button>
+    <!-- Main Widget Card (Hidden by default, slides out/in) -->
+    <div class="rating-expanded-card" id="ratingExpandedCard" style="display: none;">
+      <button class="widget-close-btn" id="closeRatingWidget" aria-label="Close Rating Prompt">&times;</button>
       
-      <div class="feedback-box" style="border: none; padding: 0; box-shadow: none; background: none;">
-        <div class="section-header" style="margin-bottom: 24px;">
-          <span class="section-subtitle">Share Your Experience</span>
-          <h2 class="section-title" style="font-size: 2rem;">Your feedback helps us improve and serve you better.</h2>
+      <div class="widget-interactive" id="widgetInteractive">
+        <h4>Share Your Experience</h4>
+        <p>Rate your momos to unlock a discount code and win a free momo platter!</p>
+        
+        <div class="widget-stars" id="interactiveStars">
+          <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
+          <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
+          <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
+          <i class="far fa-star star-btn" data-value="4" role="button" aria-label="4 Stars"></i>
+          <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
         </div>
         
-        <div class="rating-interactive-container" id="ratingInteractive">
-          <p class="rating-prompt">Rate your dining experience to unlock a discount & a chance to win a free momo platter!</p>
-          <div class="interactive-stars" id="interactiveStars">
-            <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
-            <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
-            <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
-            <i class="far fa-star star-btn" data-value="4" role="button" aria-label="4 Stars"></i>
-            <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
-          </div>
-          <p class="rating-value-label" id="ratingValueLabel">Tap a star to rate</p>
-          <button class="btn-primary" id="submitRatingBtn" style="display: none;">Submit Review</button>
-        </div>
+        <p class="widget-label" id="ratingValueLabel">Tap a star to rate</p>
+        <button class="btn-widget-submit" id="submitRatingBtn" style="display: none;">Submit Review</button>
+      </div>
 
-        <!-- Positive Feedback Success Message -->
-        <div class="positive-success-message" id="positiveSuccess" style="display: none;">
-          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-          <p class="success-txt">Thank you for your wonderful feedback! We have opened Google Reviews in a new tab so you can share your experience, claim your discount, and enter to win free momos.</p>
-          <a href="#" id="googleReviewBtn" class="btn-primary" target="_blank">Leave a Google Review</a>
-        </div>
+      <!-- Success Redirect State -->
+      <div class="widget-success" id="positiveSuccess" style="display: none;">
+        <i class="fas fa-check-circle success-badge"></i>
+        <p>Thank you! Leave a Google review to claim your discount code & enter the draw.</p>
+        <a href="#" id="googleReviewBtn" class="btn-widget-google" target="_blank">Leave Google Review</a>
       </div>
     </div>
   </div>
 
-  <!-- Feedback Dialog Modal (for < 4 stars) -->
+  <!-- PRIVATE FEEDBACK FORM MODAL (FOR < 4 STARS) -->
   <div class="modal-overlay" id="feedbackModal" style="display: none;">
     <div class="modal-card">
       <button class="modal-close-btn" id="closeFeedbackModal" aria-label="Close Modal">&times;</button>
@@ -589,12 +557,12 @@
           <textarea id="fbImprove" rows="3" required placeholder="Suggest improvements for us"></textarea>
         </div>
         
-        <button type="submit" class="btn-primary w-full">Send Feedback</button>
+        <button type="submit" class="btn-solid w-full">Send Feedback</button>
       </form>
     </div>
   </div>
 
-  <!-- Script Files -->
+  <!-- Scripts -->
   <script src="index.js"></script>
 </body>
 </html>
