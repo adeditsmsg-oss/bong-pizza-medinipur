@@ -176,9 +176,7 @@ function initReputationManagement() {
   const positiveSuccess = document.getElementById('positiveSuccess');
   const googleReviewBtn = document.getElementById('googleReviewBtn');
   
-  const ratingWidget = document.getElementById('ratingWidget');
-  const ratingMiniTrigger = document.getElementById('ratingMiniTrigger');
-  const ratingExpandedCard = document.getElementById('ratingExpandedCard');
+  const ratingModal = document.getElementById('ratingModal');
   const closeRatingWidget = document.getElementById('closeRatingWidget');
   
   const feedbackModal = document.getElementById('feedbackModal');
@@ -190,17 +188,22 @@ function initReputationManagement() {
 
   if (!stars.length || !submitBtn) return;
 
-  // Timer popup logic (always pops up every 10 seconds if closed/not completed)
+  // Timer popup logic (always pops up every 15 seconds if closed/not completed)
   function showRatingPopup() {
-    if (ratingExpandedCard.style.display === 'none' && feedbackModal.style.display === 'none') {
-      ratingMiniTrigger.style.display = 'none';
-      ratingExpandedCard.style.display = 'block';
+    if (ratingModal && ratingModal.style.display === 'none' && feedbackModal.style.display === 'none') {
+      ratingModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+      
+      // Make sure interactive elements are restored (not showing success panel yet)
+      widgetInteractive.style.display = 'block';
+      positiveSuccess.style.display = 'none';
+      submitBtn.style.display = 'none';
     }
   }
 
   function startPopupTimer() {
     if (popupInterval) clearInterval(popupInterval);
-    popupInterval = setInterval(showRatingPopup, 10000);
+    popupInterval = setInterval(showRatingPopup, 15000);
   }
 
   function stopPopupTimer() {
@@ -210,24 +213,24 @@ function initReputationManagement() {
     }
   }
 
-  // Trigger initial popup after 10 seconds of page load
-  setTimeout(showRatingPopup, 10000);
+  // Trigger initial popup after 15 seconds of page load
+  setTimeout(showRatingPopup, 15000);
   startPopupTimer();
 
-  // Click on Mini Trigger to open immediately
-  if (ratingMiniTrigger) {
-    ratingMiniTrigger.addEventListener('click', () => {
-      showRatingPopup();
-      stopPopupTimer(); // Pause automatic interval while active
-    });
-  }
-
   // Widget Close Logic (resumes interval loop)
-  if (closeRatingWidget) {
+  if (closeRatingWidget && ratingModal) {
     closeRatingWidget.addEventListener('click', () => {
-      ratingExpandedCard.style.display = 'none';
-      ratingMiniTrigger.style.display = 'flex';
-      startPopupTimer(); // Resume popup cycle in 10s
+      ratingModal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scroll
+      startPopupTimer(); // Resume popup cycle in 15s
+    });
+
+    ratingModal.addEventListener('click', (e) => {
+      if (e.target === ratingModal) {
+        ratingModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        startPopupTimer();
+      }
     });
   }
 
@@ -284,9 +287,8 @@ function initReputationManagement() {
   // Handle Review Submission
   submitBtn.addEventListener('click', () => {
     if (selectedRating < 4 && selectedRating > 0) {
-      // Hide rating widget completely
-      ratingExpandedCard.style.display = 'none';
-      ratingMiniTrigger.style.display = 'none';
+      // Hide rating modal completely
+      if (ratingModal) ratingModal.style.display = 'none';
       
       // Stop popup timer
       stopPopupTimer();
@@ -302,14 +304,12 @@ function initReputationManagement() {
     closeFeedbackModal.addEventListener('click', () => {
       feedbackModal.style.display = 'none';
       document.body.style.overflow = 'auto'; // Restore scroll
-      ratingMiniTrigger.style.display = 'flex'; // Restore widget access
     });
 
     feedbackModal.addEventListener('click', (e) => {
       if (e.target === feedbackModal) {
         feedbackModal.style.display = 'none';
         document.body.style.overflow = 'auto';
-        ratingMiniTrigger.style.display = 'flex';
       }
     });
   }
@@ -361,7 +361,6 @@ function initReputationManagement() {
       highlightStars(0);
       ratingLabel.textContent = 'Tap a star to rate';
       submitBtn.style.display = 'none';
-      ratingMiniTrigger.style.display = 'flex';
 
       alert('Thank you for your feedback! We will get in touch with you shortly.');
     });

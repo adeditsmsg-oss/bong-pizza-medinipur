@@ -486,23 +486,16 @@
     </div>
   </footer>
 
-  <!-- BESPOKE EXPANDABLE FLOATING RATING WIDGET (REPUTATION SYSTEM) -->
-  <div class="floating-rating-widget-container" id="ratingWidget">
-    <!-- Mini Trigger (Initially shown) -->
-    <div class="rating-mini-trigger" id="ratingMiniTrigger">
-      <div class="trigger-icon"><i class="fas fa-star text-gold"></i></div>
-      <span class="trigger-text">Rate & Win Pizza!</span>
-    </div>
-
-    <!-- Main Widget Card (Hidden by default, slides out/in) -->
-    <div class="rating-expanded-card" id="ratingExpandedCard" style="display: none;">
-      <button class="widget-close-btn" id="closeRatingWidget" aria-label="Close Rating Prompt">&times;</button>
+  <!-- RATING POPUP MODAL (REPUTATION SYSTEM) -->
+  <div class="modal-overlay" id="ratingModal" style="display: none;">
+    <div class="modal-card rating-modal-card">
+      <button class="modal-close-btn" id="closeRatingWidget" aria-label="Close Rating Prompt">&times;</button>
       
-      <div class="widget-interactive" id="widgetInteractive">
-        <h4>Share Your Experience</h4>
-        <p>Rate your momos to unlock a discount code and win a free momo platter!</p>
+      <div class="widget-interactive" id="widgetInteractive" style="text-align: center;">
+        <h3 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 8px; color: var(--color-primary);">Share Your Experience</h3>
+        <p style="margin-bottom: 32px; font-size: 0.95rem;">Rate your momos to unlock a discount code and win a free momo platter!</p>
         
-        <div class="widget-stars" id="interactiveStars">
+        <div class="widget-stars" id="interactiveStars" style="display: flex; gap: 16px; font-size: 40px; color: #ddd; margin-bottom: 20px; justify-content: center;">
           <i class="far fa-star star-btn" data-value="1" role="button" aria-label="1 Star"></i>
           <i class="far fa-star star-btn" data-value="2" role="button" aria-label="2 Stars"></i>
           <i class="far fa-star star-btn" data-value="3" role="button" aria-label="3 Stars"></i>
@@ -510,15 +503,15 @@
           <i class="far fa-star star-btn" data-value="5" role="button" aria-label="5 Stars"></i>
         </div>
         
-        <p class="widget-label" id="ratingValueLabel">Tap a star to rate</p>
-        <button class="btn-widget-submit" id="submitRatingBtn" style="display: none;">Submit Review</button>
+        <p class="widget-label" id="ratingValueLabel" style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Tap a star to rate</p>
+        <button class="btn-solid w-full" id="submitRatingBtn" style="display: none;">Submit Review</button>
       </div>
 
       <!-- Success Redirect State -->
-      <div class="widget-success" id="positiveSuccess" style="display: none;">
-        <i class="fas fa-check-circle success-badge"></i>
-        <p>Thank you! Leave a Google review to claim your discount code & enter the draw.</p>
-        <a href="#" id="googleReviewBtn" class="btn-widget-google" target="_blank">Leave Google Review</a>
+      <div class="widget-success" id="positiveSuccess" style="display: none; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+        <i class="fas fa-check-circle success-badge" style="font-size: 48px; color: var(--color-secondary);"></i>
+        <p style="font-size: 0.95rem;">Thank you! Leave a Google review to claim your discount code & enter the draw.</p>
+        <a href="#" id="googleReviewBtn" class="btn-solid" target="_blank">Leave Google Review</a>
       </div>
     </div>
   </div>
